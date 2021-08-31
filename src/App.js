@@ -55,7 +55,7 @@ function App() {
       <div id="top">
         <div className="chooselang">
           <div id="langselector">
-          <span>{langSelected==='es'?'Idioma':'Language'}: </span>
+          <span>{langSelected==='en'?'Idioma':'Language'}: </span>
             <select onChange={languageHandler}>
               {
                 languages.map((value,key)=>(
