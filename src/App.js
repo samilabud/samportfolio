@@ -9,7 +9,7 @@ import {index as Home} from './pages/home/index.component';
 import {indexenglish as EnglishHome} from './pages/home/indexenglish.component';
 
 function App() {
-  const [langSelected, setLangSelected] = useState('es');
+  const [langSelected, setLangSelected] = useState('Español');
   useEffect(()=>
   {
     initSr();
@@ -33,16 +33,16 @@ function App() {
     
   },[langSelected])
 
-  const languages = ['es','en'];
+  const languages = ['Español','English'];
   const languageHandler = (event) => {
     setLangSelected(event.target.value);
   }
 
   const renderswitchlang=()=>{
     switch(langSelected){
-      case 'es':
+      case 'Español':
         return <Home />
-      case 'en':
+      case 'English':
         return <EnglishHome />
       default:
         return <Home />
@@ -55,7 +55,7 @@ function App() {
       <div id="top">
         <div className="chooselang">
           <div id="langselector">
-          <span>{langSelected==='en'?'Idioma':'Language'}: </span>
+          <span>{langSelected==='Español'?'Idioma':'Language'}: </span>
             <select onChange={languageHandler}>
               {
                 languages.map((value,key)=>(
