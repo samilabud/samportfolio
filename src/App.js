@@ -9,7 +9,7 @@ import {index as Home} from './pages/home/index.component';
 import {indexenglish as EnglishHome} from './pages/home/indexenglish.component';
 
 function App() {
-  const [langSelected, setLangSelected] = useState('Español');
+  const [langSelected, setLangSelected] = useState('English');
   useEffect(()=>
   {
     initSr();
@@ -33,7 +33,7 @@ function App() {
     
   },[langSelected])
 
-  const languages = ['Español','English'];
+  const languages = ['English','Español'];
   const languageHandler = (event) => {
     setLangSelected(event.target.value);
   }
@@ -55,7 +55,7 @@ function App() {
       <div id="top">
         <div className="chooselang">
           <div id="langselector">
-          <span>{langSelected==='Español'?'Idioma':'Language'}: </span>
+          <span>{langSelected==='English'?'Idioma / Language':'Language / Idioma 🇪🇸'}: </span>
             <select onChange={languageHandler}>
               {
                 languages.map((value,key)=>(
