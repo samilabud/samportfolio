@@ -35,7 +35,7 @@ export const indexenglish = () => {
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info">
               <p className="about-wrapper__info-text">
-                I'm a lover of code and devoloping logic, my passion is problem solving. 
+                I'm a lover of code and developing logic, my passion is problem solving. 
                 I would say I'm very curious because I always seeking new challenges to getting better at myself always.
               </p>
               <p className="about-wrapper__info-text">
@@ -215,4 +215,4 @@ export const indexenglish = () => {
   )
 }
 
-export default indexenglish;
+export default React.memo(indexenglish);
