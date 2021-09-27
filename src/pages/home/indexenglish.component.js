@@ -93,6 +93,33 @@ export const indexenglish = () => {
             </div>
           </div>
           { /* /END Project */ }
+          { /* Each .row is a project */ }
+          <div className="row">
+            <div className="col-lg-4 col-sm-12">
+              <div className="project-wrapper__text">
+                <h3 className="project-wrapper__text-title">Web Project - Crypto-Prices</h3>
+                <div>
+                  <p className="mb-4">
+                    Web portal built with REACT, use the API of CoinBase to show the cryptocurrency prices, it has your own API created with NodeJS to provide 
+                    an authentication system that is based in PostgreSQL.
+                  </p>
+                </div>
+                <a target="_blank" rel="noreferrer" className="cta-btn cta-btn--hero" href="https://samcryptoprices.herokuapp.com">
+                  Ver en linea
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-8 col-sm-12">
+              <div className="project-wrapper__image">
+                <a href="https://samcryptoprices.herokuapp.com" target="_blank" rel="noreferrer">
+                  <div data-tilt className="thumbnail rounded">
+                    <img className="img-fluid" src="./assets/projectCryptoPrices.jpg" alt="Crypto-Prices" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          { /* /END Project */ }
            { /* Each .row is a project */ }
            <div className="row">
             <div className="col-lg-4 col-sm-12">

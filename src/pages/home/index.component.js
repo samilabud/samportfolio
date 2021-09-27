@@ -96,6 +96,33 @@ export const index = () => {
             </div>
           </div>
           { /* /END Project */ }
+          { /* Each .row is a project */ }
+          <div className="row">
+            <div className="col-lg-4 col-sm-12">
+              <div className="project-wrapper__text">
+                <h3 className="project-wrapper__text-title">Proyecto Web Crypto Prices</h3>
+                <div>
+                  <p className="mb-4">
+                    Un portal desarrollado con REACT, utiliza el API de CoinBase para mostrar el precio de las criptomonedas y cuenta con su propio API realizado en NodeJS para proporcionar un 
+                    sistema de autenticacion que se base en PostgreSQL.
+                  </p>
+                </div>
+                <a target="_blank" rel="noreferrer" className="cta-btn cta-btn--hero" href="https://samcryptoprices.herokuapp.com">
+                  Ver en linea
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-8 col-sm-12">
+              <div className="project-wrapper__image">
+                <a href="https://samcryptoprices.herokuapp.com" target="_blank" rel="noreferrer">
+                  <div data-tilt className="thumbnail rounded">
+                    <img className="img-fluid" src="./assets/projectCryptoPrices.jpg" alt="Crypto Prices" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          { /* /END Project */ }
            { /* Each .row is a project */ }
            <div className="row">
             <div className="col-lg-4 col-sm-12">
@@ -208,8 +235,7 @@ export const index = () => {
             target="_blank" rel="noreferrer"
             className="cta-btn cta-btn--resume"
             href="mailto:samilabud@gmail.com"
-            >samilabud@gmail.com</a
-          >
+            >samilabud@gmail.com</a>
         </div>
       </div>
     </section>
