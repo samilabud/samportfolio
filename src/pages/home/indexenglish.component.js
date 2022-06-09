@@ -44,7 +44,7 @@ export const indexenglish = () => {
                create flowcharts, team work to achieve great things together, looking for the best way to do the job and most of all "coding" 🤗.
               </p>
               <span className="d-flex mt-3">
-                <a target="_blank" rel="noreferrer" className="cta-btn cta-btn--resume" href="/assets/CV_SamilAbud_2021_English.pdf">
+                <a target="_blank" rel="noreferrer" className="cta-btn cta-btn--resume" href="/assets/CV_SamilAbud_2022_english.pdf">
                   See Resume
                 </a>
               </span>
