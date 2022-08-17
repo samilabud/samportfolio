@@ -47,6 +47,9 @@ export const indexenglish = () => {
                 <a target="_blank" rel="noreferrer" className="cta-btn cta-btn--resume" href="/assets/Samil_Abud_Resume.pdf">
                   See Resume
                 </a>
+                <a target="_blank" class="cta-btn" href="https://www.codewars.com/users/samilabud">
+                  <img width="350" src="https://www.codewars.com/users/samilabud/badges/small" />
+                </a>
               </span>
             </div>
           </div>
