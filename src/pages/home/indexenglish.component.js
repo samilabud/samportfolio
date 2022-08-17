@@ -48,7 +48,7 @@ export const indexenglish = () => {
                   See Resume
                 </a>
                 <a target="_blank" rel="noreferrer" class="cta-btn" href="https://www.codewars.com/users/samilabud">
-                  <img alt="codewars badge" width="350" src="https://www.codewars.com/users/samilabud/badges/small" />
+                  <img alt="codewars badge" width="150" src="https://www.codewars.com/users/samilabud/badges/micro" />
                 </a>
               </span>
             </div>
