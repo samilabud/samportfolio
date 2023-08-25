@@ -136,50 +136,6 @@ export const indexenglish = () => {
               <div className="col-lg-4 col-sm-12">
                 <div className="project-wrapper__text">
                   <h3 className="project-wrapper__text-title">
-                    Web Project - Crypto-Prices
-                  </h3>
-                  <div>
-                    <p className="mb-4">
-                      Web portal built with REACT, use the API of CoinBase to
-                      show the cryptocurrency prices, it has your own API
-                      created with NodeJS to provide an authentication system
-                      that is based in PostgreSQL.
-                    </p>
-                  </div>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    className="cta-btn cta-btn--hero"
-                    href="https://samcryptoprices-cddeb3ccb8ee.herokuapp.com/"
-                  >
-                    See online
-                  </a>
-                </div>
-              </div>
-              <div className="col-lg-8 col-sm-12">
-                <div className="project-wrapper__image">
-                  <a
-                    href="https://samcryptoprices-cddeb3ccb8ee.herokuapp.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div data-tilt className="thumbnail rounded">
-                      <img
-                        className="img-fluid"
-                        src="./assets/projectCryptoPrices.jpg"
-                        alt="Crypto-Prices"
-                      />
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* /END Project */}
-            {/* Each .row is a project */}
-            <div className="row">
-              <div className="col-lg-4 col-sm-12">
-                <div className="project-wrapper__text">
-                  <h3 className="project-wrapper__text-title">
                     Web Project - E-commerce
                   </h3>
                   <div>
@@ -313,6 +269,50 @@ export const indexenglish = () => {
                         className="img-fluid"
                         src="./assets/projectrf.jpg"
                         alt="Web Project - RoboFriends"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* /END Project */}
+            {/* Each .row is a project */}
+            <div className="row">
+              <div className="col-lg-4 col-sm-12">
+                <div className="project-wrapper__text">
+                  <h3 className="project-wrapper__text-title">
+                    Web Project - Crypto-Prices
+                  </h3>
+                  <div>
+                    <p className="mb-4">
+                      Web portal built with REACT, use the API of CoinBase to
+                      show the cryptocurrency prices, it has your own API
+                      created with NodeJS to provide an authentication system
+                      that is based in PostgreSQL.
+                    </p>
+                  </div>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cta-btn cta-btn--hero"
+                    href="https://samcryptoprices-cddeb3ccb8ee.herokuapp.com/"
+                  >
+                    See online
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-8 col-sm-12">
+                <div className="project-wrapper__image">
+                  <a
+                    href="https://samcryptoprices-cddeb3ccb8ee.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div data-tilt className="thumbnail rounded">
+                      <img
+                        className="img-fluid"
+                        src="./assets/projectCryptoPrices.jpg"
+                        alt="Crypto-Prices"
                       />
                     </div>
                   </a>
