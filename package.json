@@ -1,47 +1,35 @@
 {
-  "name": "samportfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "bootstrap": "^5.1.0",
-    "jquery": "^3.6.0",
-    "node-sass": "^6.0.1",
-    "popper.js": "^1.16.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "scrollreveal": "^4.0.9",
-    "tilt.js": "^1.2.1",
-    "web-vitals": "^1.0.1"
-  },
+  "name": "simplefolio",
+  "version": "1.0.1",
+  "private": "true",
+  "description": "A clean, beautiful and responsive portfolio template for Developers!",
+  "source": "src/index.html",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel",
+    "build": "parcel build",
+    "gh-pages-build": "parcel build --public-url ."
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobidev/simplefolio"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "Jacobo Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cobidev/simplefolio/issues"
   },
+  "homepage": "https://github.com/cobidev/simplefolio#readme",
   "devDependencies": {
-    "eslint-plugin-react": "^7.25.1"
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "popper.js": "^1.16.1",
+    "vanilla-tilt": "^1.7.3"
   }
 }
