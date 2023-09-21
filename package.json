@@ -21,7 +21,7 @@
   "author": "Samil Abud",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0",
+    "@parcel/transformer-sass": "^2.9.3",
     "parcel": "^2.7.0",
     "prettier": "^2.7.1"
   },
