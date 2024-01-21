@@ -1,6 +1,11 @@
+# SamPorfolio
+
+This project is focused on showing all my personal projects from scratch.
+
 # Based on simplefolio
+
     https://github.com/zero-to-mastery/simplefolio
-    
+
     NOTE: If your run into issues installing the dependencies with NPM, use this below command:
 
     # Install dependencies with all permissions
