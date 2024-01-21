@@ -2,6 +2,8 @@
 
 This project is focused on showing all my personal projects from scratch.
 
+URL: https://samilabud.netlify.app
+
 # Based on simplefolio
 
     https://github.com/zero-to-mastery/simplefolio
