@@ -93,3 +93,12 @@
 .up i {
   color: #272727;
 }
+
+.problem-solving {
+  color: $white-color;
+
+  &:hover {
+    text-decoration: none;
+    color: $white-color;
+  }
+}
