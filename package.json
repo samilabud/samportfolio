@@ -3,10 +3,9 @@
   "version": "2.1",
   "private": true,
   "description": "A clean, beautiful and responsive portfolio!",
-  "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel src/index.html src/google85fd8c9ec2bbd804.html",
+    "build": "parcel build src/index.html src/google85fd8c9ec2bbd804.html",
     "gh-pages-build": "parcel build --public-url ."
   },
   "repository": {
