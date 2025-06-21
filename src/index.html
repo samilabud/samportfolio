@@ -92,7 +92,125 @@
         <h2 class="section-title dark-blue-text">
           Current Personal Projects
         </h2>
-        <!-- **** Each .row is a project **** -->
+        <!-- ── NEW TOP PROJECT #1: RoomCity ── -->
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">
+                RoomCity – Room Rental & Roommate Matching Platform
+              </h3>
+              <div class="project-description collapsed">
+                <p>
+                  RoomCity is a full-stack web application designed to simplify the process of finding rooms,
+                  roommates, and managing listings. It offers a seamless user experience for both landlords and
+                  renters through features like real-time messaging, city-based room filtering, personalized
+                  dashboards, and role-based access.
+                </p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                  <li>Google OAuth authentication via NextAuth</li>
+                  <li>Dynamic room listing with filters (price, city, availability)</li>
+                  <li>Full messaging system between room seekers and landlords</li>
+                  <li>Status toggling for listings (“Rented” / “Not Listed”)</li>
+                  <li>Landlord dashboard with edit controls and reservation tracking</li>
+                  <li>Animated UI elements with Framer Motion</li>
+                  <li>Data fetching with SWR for optimized performance</li>
+                </ul>
+                <p>
+                  <strong>Architecture & Dev Practices:</strong> Built with Next.js for SSR/SEO, modular React
+                  components, MongoDB for data storage, Tailwind CSS for responsive design, TypeScript +
+                  ESLint + Prettier, and hosted on Vercel.
+                </p>
+              </div>
+              <a href="https://www.roomcity.ca/" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
+                Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/projectRoomCity.png" alt="RoomCity screenshot" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── NEW TOP PROJECT #2: SweepNSleep ── -->
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">
+                SweepNSleep – Roommate Management Platform
+              </h3>
+              <div class="project-description collapsed">
+                <p>
+                  SweepNSleep is a full-featured web application designed to simplify household management for
+                  roommates and landlords. Built with React, Redux, React Bootstrap and Tailwind CSS on the frontend
+                  and Node.js, Express.js, MongoDB + Mongoose on the backend, it delivers:
+                </p>
+                <ul>
+                  <li>Real-time roommate chat system</li>
+                  <li>Lease tracking with digital signatures</li>
+                  <li>Payment reminders and status tracking</li>
+                  <li>Task assignment (chore tracking)</li>
+                  <li>Sticky notes for admin reminders</li>
+                  <li>Admin-controlled, multi-role access (admin, landlord, roommate, neatkeeper)</li>
+                </ul>
+                <p>Authentication via JWT and protected routes via custom middleware. Tested with Jest & React Testing
+                  Library.</p>
+              </div>
+              <a href="https://sweepnsleep.com" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
+                Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep screenshot" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── NEW TOP PROJECT #3: Damage Deposit Bank ── -->
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">
+                Damage Deposit Bank – Full-Stack SaaS Platform
+              </h3>
+              <div class="project-description collapsed">
+                <p>
+                  Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
+                  from payment and holding to release—ensuring transparency and accountability. Built with
+                  Next.js + React on the frontend and Node.js + Express + MongoDB on the backend, it offers:
+                </p>
+                <ul>
+                  <li>User authentication & role-based access (admin, landlord, tenant)</li>
+                  <li>Room & deposit management system</li>
+                  <li>Chat functionality between users</li>
+                  <li>Deposit request creation & approval workflows</li>
+                  <li>Role-specific dashboards</li>
+                  <li>Responsive design with Tailwind CSS</li>
+                  <li>Subtle animations via Framer Motion</li>
+                </ul>
+              </div>
+              <a href="https://damagedepositbank.com" target="_blank" rel="noreferrer"
+                class="cta-btn cta-btn--hero">View Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/damageDepositProject.png" alt="Damage Deposit Bank screenshot" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
