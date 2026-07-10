@@ -1,0 +1,108 @@
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 1001;
+  padding: 0.8rem 1.6rem;
+  background: $dark-blue-text;
+  color: $white-color;
+  font-size: 1.4rem;
+  border-radius: 0 0 4px 4px;
+
+  &:focus {
+    top: 0;
+    outline: 2px solid $secondary-color;
+    outline-offset: 2px;
+  }
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.2rem 5.6rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  @include respond(phone) {
+    padding: 1rem $default-font-size;
+  }
+
+  &--scrolled {
+    background-color: rgba($white-color, 0.97);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $dark-blue-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+    @include respond(tab-port) {
+      gap: 1.6rem;
+    }
+
+    @include respond(phone) {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    a {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $dark-blue-text;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: $secondary-color;
+      }
+
+      &.is-active {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__cta {
+    font-size: 1.4rem !important;
+    padding: 0.6rem 1.2rem !important;
+    border: 2px solid $secondary-color !important;
+    color: $secondary-color !important;
+    -webkit-text-fill-color: $secondary-color !important;
+
+    &:hover {
+      -webkit-text-fill-color: $white-color !important;
+      color: $white-color !important;
+    }
+  }
+}

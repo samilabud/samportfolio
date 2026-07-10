@@ -3,19 +3,38 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+  <link rel="canonical" href="https://samilabud.netlify.app/" />
 
   <title>Samil Abud | Full-Stack Web Developer</title>
-  <meta name="keywords"
-    content="samilabud, samil abud, developer, front-end, backend, full-stack web, samilabud@gmail.com" />
   <meta name="description"
-    content="Thank you for visiting my portfolio. If you're looking for a skilled Full Stack Web Developer to help you turn your web project into a reality, please don't hesitate to get in touch. Let's build something incredible together!" />
+    content="Samil Abud — Full-Stack Developer specializing in React, Next.js, Node.js, and TypeScript. Portfolio of SaaS, mobile, and e-commerce products. Freelance developer at Expensify via Upwork." />
+  <meta name="author" content="Samil Abud" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samilabud.netlify.app/" />
+  <meta property="og:title" content="Samil Abud | Full-Stack Web Developer" />
+  <meta property="og:description"
+    content="Full-Stack Developer building SaaS platforms, mobile apps, and e-commerce products with React, Next.js, and Node.js." />
+  <meta property="og:image" content="https://samilabud.netlify.app/assets/profile.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samil Abud | Full-Stack Web Developer" />
+  <meta name="twitter:description"
+    content="Full-Stack Developer building SaaS platforms, mobile apps, and e-commerce products with React, Next.js, and Node.js." />
+  <meta name="twitter:image" content="https://samilabud.netlify.app/assets/profile.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="styles.scss" />
   <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — migrate UA-6364625-1 to GA4 when ready -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6364625-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,9 +43,54 @@
 
     gtag('config', 'UA-6364625-1');
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Samil Abud",
+      "jobTitle": "Full-Stack Web Developer",
+      "url": "https://samilabud.netlify.app",
+      "image": "https://samilabud.netlify.app/assets/profile.jpg",
+      "email": "samilabud@gmail.com",
+      "sameAs": [
+        "https://github.com/samilabud",
+        "https://www.linkedin.com/in/samil-abud/",
+        "https://twitter.com/samilabud"
+      ],
+      "knowsAbout": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "PostgreSQL"
+      ]
+    }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="#top">Samil Abud</a>
+        <ul class="site-nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="site-nav__cta cta-btn" href="assets/Samil_Abud_Resume_2026.pdf" target="_blank"
+              rel="noreferrer">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
   <div id="top"></div>
 
   <!-- **** Hero Section **** -->
@@ -38,7 +102,9 @@
         I'm a Full-Stack Web Developer!
       </h1>
       <p class="hero-cta load-hidden">
-        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#projects">View Projects</a>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="assets/Samil_Abud_Resume_2026.pdf" target="_blank">Resume</a>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#contact">Contact</a>
       </p>
     </div>
   </section>
@@ -51,31 +117,32 @@
       <div class="row about-wrapper">
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__image load-hidden">
-            <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px"
-              src="assets/profile.jpg" alt="Profile Image" />
+            <img alt="Samil Abud, Full-Stack Web Developer" class="img-fluid rounded shadow-lg" height="300"
+              width="300" src="assets/profile.jpg" loading="eager" />
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__info load-hidden">
             <p class="about-wrapper__info-text">
-              I'm a lover of code and developing logic, my passion is problem-solving. I would say I'm very curious
-              because I always seeking new challenges to get better at myself.
+              I'm a lover of code and problem-solving at heart. I build full-stack products — from auth and dashboards
+              to real-time messaging and payments — and I'm always seeking new challenges to grow as an engineer.
             </p>
             <p class="about-wrapper__info-text">
-              Currently, I am a freelance developer at UpWork working with the Expensify application most of the time, I
-              like to be involved in building software from scratch, optimizing applications, looking for bugs and
-              fixing them, creating flowcharts, working to achieve great things together, looking for the best way to do
-              the job and most of all "coding" 🤗.
+              Currently, I'm a freelance developer on Upwork, working primarily with the Expensify application. I enjoy
+              building software from scratch, optimizing applications, hunting down bugs, designing workflows, and
+              collaborating to ship great products.
             </p>
             <span class="d-flex mt-3">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
-                href="assets/Samil_Abud_Resume_2025.pdf">
+                href="assets/Samil_Abud_Resume_2026.pdf">
                 View Resume
               </a>
 
               <a target="_blank" rel="noreferrer" class="cta-btn problem-solving"
-                href="https://www.codewars.com/users/samilabud">Problem Solving Level:
-                <img alt="codewars badge" width="150" src="https://www.codewars.com/users/samilabud/badges/micro" />
+                href="https://www.codewars.com/users/samilabud" aria-label="Codewars profile — problem solving rank">
+                Problem Solving Level:
+                <img alt="Codewars rank badge" width="150" height="20" loading="lazy"
+                  src="https://www.codewars.com/users/samilabud/badges/micro" />
               </a>
             </span>
           </div>
@@ -84,6 +151,30 @@
     </div>
   </section>
   <!-- /END About Section -->
+
+  <!-- **** Skills Section **** -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title dark-blue-text load-hidden">Skills &amp; Technologies</h2>
+      <div class="skills-grid load-hidden">
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Next.js</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express</span>
+        <span class="skill-tag">React Native</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Supabase</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">Redux</span>
+        <span class="skill-tag">Jest</span>
+        <span class="skill-tag">GraphQL</span>
+        <span class="skill-tag">Firebase</span>
+      </div>
+    </div>
+  </section>
+  <!-- /END Skills Section -->
 
   <!-- **** Projects Section **** -->
   <section id="projects">
@@ -99,7 +190,7 @@
               <h3 class="project-wrapper__text-title">
                 RoomCity – Room Rental & Roommate Matching Platform
               </h3>
-              <div class="project-description collapsed">
+              <div class="project-description">
                 <p>
                   RoomCity is a full-stack web application designed to simplify the process of finding rooms,
                   roommates, and managing listings. It offers a seamless user experience for both landlords and
@@ -130,7 +221,8 @@
             <div class="project-wrapper__image">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                 class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/projectRoomCity.png" alt="RoomCity screenshot" />
+                <img class="img-fluid" src="./assets/projectRoomCity.png" alt="RoomCity room rental platform screenshot"
+                  width="800" height="450" loading="lazy" />
               </div>
             </div>
           </div>
@@ -143,7 +235,7 @@
               <h3 class="project-wrapper__text-title">
                 SweepNSleep – Roommate Management Platform
               </h3>
-              <div class="project-description collapsed">
+              <div class="project-description">
                 <p>
                   SweepNSleep is a full-featured web application designed to simplify household management for
                   roommates and landlords. Built with React, Redux, React Bootstrap and Tailwind CSS on the frontend
@@ -168,7 +260,8 @@
             <div class="project-wrapper__image">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                 class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep screenshot" />
+                <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep roommate management screenshot"
+                  width="800" height="450" loading="lazy" />
               </div>
             </div>
           </div>
@@ -181,7 +274,7 @@
               <h3 class="project-wrapper__text-title">
                 Damage Deposit Bank – Full-Stack SaaS Platform
               </h3>
-              <div class="project-description collapsed">
+              <div class="project-description">
                 <p>
                   Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
                   from payment and holding to release—ensuring transparency and accountability. Built with
@@ -205,7 +298,8 @@
             <div class="project-wrapper__image">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                 class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/damageDepositProject.png" alt="Damage Deposit Bank screenshot" />
+                <img class="img-fluid" src="./assets/damageDepositProject.png"
+                  alt="Damage Deposit Bank SaaS platform screenshot" width="800" height="450" loading="lazy" />
               </div>
             </div>
           </div>
@@ -246,7 +340,8 @@
               <a href="https://dhiguey-longanizas.com" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/DHigueyLonganizas.jpg" alt="Dhiguey Longanizas" />
+                  <img class="img-fluid" src="./assets/DHigueyLonganizas.jpg" alt="Dhiguey Longanizas e-commerce store"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -276,7 +371,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://play.google.com/store/apps/details?id=com.samilabud.LactaConsejos">
-                View On Google Play
+                View on Google Play
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/LactaConsejos">
@@ -290,7 +385,8 @@
                 rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectLactaConsejos.png" alt="Animal Adventures" />
+                  <img class="img-fluid" src="./assets/projectLactaConsejos.png" alt="Lacta Consejos mobile app screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -316,7 +412,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://nextweatherwatch.netlify.app">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/NextWeatherWatch">
@@ -329,7 +425,8 @@
               <a href="https://nextweatherwatch.netlify.app" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectNextWeatherWatch.jpg" alt="Next Weather Watch" />
+                  <img class="img-fluid" src="./assets/projectNextWeatherWatch.jpg" alt="NextWeatherWatch app screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -355,7 +452,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://marsrovergallery.onrender.com">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/NasaGallery?tab=readme-ov-file">
@@ -368,7 +465,8 @@
               <a href="https://marsrovergallery.onrender.com" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/NasaGalleryProject.jpg" alt="Next Weather Watch" />
+                  <img class="img-fluid" src="./assets/NasaGalleryProject.jpg" alt="NASA Mars Rover Gallery screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -393,7 +491,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
-                View On Google Play
+                View on Google Play
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/EliLearnApp.git">
@@ -407,7 +505,8 @@
                 rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures" />
+                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -432,7 +531,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://youtube.com/shorts/9FJJ3gwoB94?feature=share">
-                See Demo
+                View Demo
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/MealsToGo">
@@ -445,7 +544,8 @@
               <a href="https://github.com/samilabud/MealsToGo" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go" />
+                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go restaurant app screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -472,7 +572,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://samecommerce.onrender.com">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/ZeroToMasteryEcommerce">
@@ -485,7 +585,8 @@
               <a href="https://samecommerce.onrender.com" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectSamCommerce.jpg" alt="Web Project - SamCommerce" />
+                  <img class="img-fluid" src="./assets/projectSamCommerce.jpg" alt="SamCommerce e-commerce project screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -513,7 +614,7 @@
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://web-face-recognition.onrender.com">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/WebFaceRecognition.git">
@@ -526,7 +627,8 @@
               <a href="https://web-face-recognition.onrender.com" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectAFR.jpg" alt="Web Project - FaceRecognition" />
+                  <img class="img-fluid" src="./assets/projectAFR.jpg" alt="Face Recognition web app screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -549,7 +651,7 @@
                 </p>
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://chartviews.onrender.com/">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/ChartViews">
@@ -562,7 +664,8 @@
               <a href="https://chartviews.onrender.com/" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/ChartViewProject.jpg" alt="ChartView" />
+                  <img class="img-fluid" src="./assets/ChartViewProject.jpg" alt="ChartView data visualization screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -588,7 +691,7 @@
                 </p>
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://jokejoy.onrender.com/">
-                See online
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/JokeJoy">
@@ -601,7 +704,8 @@
               <a href="https://jokejoy.onrender.com/" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectJokeJoy.jpg" alt="JokeJoy" />
+                  <img class="img-fluid" src="./assets/projectJokeJoy.jpg" alt="JokeJoy jokes website screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -624,8 +728,8 @@
                 </p>
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
-                href="http://samrobofriends.netlify.app">
-                See online
+                href="https://samrobofriends.netlify.app">
+                View Online
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/roboFriends.git">
@@ -635,10 +739,11 @@
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image">
-              <a href="http://samrobofriends.netlify.app" target="_blank" rel="noreferrer">
+              <a href="https://samrobofriends.netlify.app" target="_blank" rel="noreferrer">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectrf.jpg" alt="Web Project - RoboFriends" />
+                  <img class="img-fluid" src="./assets/projectrf.jpg" alt="RoboFriends React project screenshot"
+                    width="800" height="450" loading="lazy" />
                 </div>
               </a>
             </div>
@@ -656,7 +761,7 @@
       <h2 class="section-title">Contact</h2>
       <div class="contact-wrapper load-hidden">
         <p class="contact-wrapper__text">
-          To contact me just send me an Email
+          Interested in working together? Send me an email — I typically respond within 24 hours.
         </p>
         <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--resume" href="mailto:samilabud@gmail.com">
           samilabud@gmail.com
@@ -665,22 +770,24 @@
     </div>
   </section>
   <!-- /END Contact Section -->
+  </main>
 
   <!-- **** Footer Section **** -->
   <footer class="footer navbar-static-bottom">
     <div class="container">
-      <a href="#top" class="back-to-top">
+      <a href="#top" class="back-to-top" aria-label="Back to top">
         <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
       </a>
       <div class="social-links">
-        <a href="https://twitter.com/samilabud" target="_blank" rel="noreferrer">
-          <i class="fa fa-twitter fa-inverse"></i>
+        <a href="https://twitter.com/samilabud" target="_blank" rel="noreferrer" aria-label="Samil on X (Twitter)">
+          <i class="fa fa-twitter fa-inverse" aria-hidden="true"></i>
         </a>
-        <a href="https://www.linkedin.com/in/samil-abud/" target="_blank" rel="noreferrer">
-          <i class="fa fa-linkedin fa-inverse"></i>
+        <a href="https://www.linkedin.com/in/samil-abud/" target="_blank" rel="noreferrer"
+          aria-label="Samil on LinkedIn">
+          <i class="fa fa-linkedin fa-inverse" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/samilabud" target="_blank" rel="noreferrer">
-          <i class="fa fa-github fa-inverse"></i>
+        <a href="https://github.com/samilabud" target="_blank" rel="noreferrer" aria-label="Samil on GitHub">
+          <i class="fa fa-github fa-inverse" aria-hidden="true"></i>
         </a>
       </div>
     </div>
