@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelWidth -g pixelHeight -g format src/assets/profile.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"src/assets/profile foto big.jpg\")"
+    ]
+  }
+}

@@ -89,6 +89,11 @@ npm run gh-pages-build
 
 Then deploy the contents of `dist/`.
 
+> If `gh-pages-build` fails with `Could not find entry: ...`, your `package.json`
+> is on an older version of this script that omitted the entry files — update
+> it to `parcel build src/index.html src/google85fd8c9ec2bbd804.html --public-url .`
+> (matching `build` and `start`, plus `--public-url .`).
+
 ## Updating Content
 
 | What to change | Where |
@@ -107,6 +112,25 @@ Then deploy the contents of `dist/`.
 | `npm start` | Dev server with hot reload |
 | `npm run build` | Production build to `dist/` |
 | `npm run gh-pages-build` | Build with relative public URL for GitHub Pages |
+
+## Troubleshooting
+
+- **`npm start` or a build exits with `zsh: segmentation fault`** — this is
+  Parcel's native worker crashing, almost always from a stale/corrupted local
+  cache rather than a code issue. Clear it and retry:
+
+  ```bash
+  rm -rf .parcel-cache dist
+  npm start
+  ```
+
+  If it still crashes, also remove `node_modules` and reinstall
+  (`rm -rf node_modules && npm install`), and confirm your Node version is a
+  supported LTS (see Prerequisites) — a much newer major Node version than
+  Parcel 2 was built against can also trigger native-module crashes.
+
+- **`gh-pages-build` fails with `Could not find entry: ...`** — see the note
+  in [Deployment](#deployment); the script needs explicit entry files.
 
 ## Credits
 

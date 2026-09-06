@@ -75,4 +75,49 @@
       }
     }
   }
+
+  .earlier-projects {
+    margin-top: 4rem;
+    text-align: left;
+
+    &__toggle {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $secondary-color;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba($secondary-color, 0.4);
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        content: "▸ ";
+      }
+    }
+
+    &[open] .earlier-projects__toggle::before {
+      content: "▾ ";
+    }
+
+    &__inner {
+      margin-top: 3rem;
+      opacity: 0.85;
+
+      .row {
+        margin-bottom: 4rem;
+      }
+
+      .project-wrapper__text-title {
+        font-size: 1.8rem;
+      }
+
+      .project-wrapper__image {
+        width: 70%;
+      }
+    }
+  }
 }
