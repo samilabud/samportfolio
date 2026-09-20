@@ -49,6 +49,21 @@
       }
     }
 
+    // Lists otherwise inherit Bootstrap's 1rem body size, which reads much
+    // smaller than the 1.6rem paragraphs around them.
+    .project-description {
+      ul:not(.project-stack) {
+        padding-left: 2rem;
+        margin-bottom: 1.6rem;
+
+        li {
+          font-size: 1.5rem;
+          line-height: 1.6;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
     &__image {
       width: 90%;
       margin: 0 auto;
@@ -165,6 +180,63 @@
       background-color: transparent;
       border-style: dashed;
       opacity: 0.85;
+    }
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.3rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $dark-blue-text;
+      background-color: rgba($secondary-color, 0.12);
+      border: 1px solid rgba($secondary-color, 0.35);
+      border-radius: 999px;
+    }
+  }
+
+  // "Key features" accordion inside a project card; mirrors the
+  // earlier-projects toggle so both collapsibles look related.
+  .project-details {
+    margin-top: 1.6rem;
+
+    &__toggle {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $secondary-color;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba($secondary-color, 0.4);
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        content: "▸ ";
+      }
+
+      &:focus-visible {
+        outline: 2px solid $dark-blue-text;
+        outline-offset: 4px;
+      }
+    }
+
+    &[open] &__toggle::before {
+      content: "▾ ";
+    }
+
+    &__body {
+      margin-top: 1.6rem;
     }
   }
 
