@@ -130,9 +130,12 @@
             </p>
             <p class="about-wrapper__info-text">
               Right now, I'm building the multi-tenant platform behind Evercred, a healthcare credentialing SaaS —
-              physician, enterprise, and admin portals, plus an AI-powered OCR and document-processing pipeline built
-              on the Anthropic Claude API. I'm also actively freelancing on Upwork, and I still enjoy building
-              software from scratch, hunting down bugs, and collaborating to ship great products.
+              physician, enterprise, and admin portals, plus an AI-powered document-processing pipeline: Python/Django
+              handles preprocessing, then Claude's vision capability extracts structured data directly from document
+              images. I also fixed a real accuracy bug — extraction was only ~70% correct on certain formats, so I
+              added a validation step that cross-checks the result against the PDF's embedded text layer, raising
+              accuracy to ~100%. I'm also actively freelancing on Upwork, and I still enjoy building software from
+              scratch, hunting down bugs, and collaborating to ship great products.
             </p>
             <span class="d-flex mt-3">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
@@ -175,7 +178,7 @@
         <span class="skill-tag">Firebase</span>
         <span class="skill-tag">Anthropic Claude API</span>
         <span class="skill-tag">LLM Integration</span>
-        <span class="skill-tag">OCR / Document Extraction</span>
+        <span class="skill-tag">AI Document Extraction (Claude Vision)</span>
         <span class="skill-tag">Prompt Engineering</span>
         <span class="skill-tag">Prisma</span>
         <span class="skill-tag">Inngest</span>
@@ -195,7 +198,7 @@
     <div class="container">
       <div class="project-wrapper">
         <h2 class="section-title dark-blue-text">
-          Current Personal Projects
+          Projects I've Worked On
         </h2>
         <!-- ── NEW TOP PROJECT #1: RoomCity ── -->
         <div class="row">
@@ -281,43 +284,58 @@
           </div>
         </div>
 
-        <!-- ── NEW TOP PROJECT #3: Damage Deposit Bank ── -->
+        <!-- **** Each .row is a project **** -->
         <div class="row">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
               <h3 class="project-wrapper__text-title">
-                Damage Deposit Bank – Full-Stack SaaS Platform
+                React Native Project - Animal Adventures
               </h3>
               <div class="project-description">
                 <p>
-                  Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
-                  from payment and holding to release—ensuring transparency and accountability. Built with
-                  Next.js + React on the frontend and Node.js + Express + MongoDB on the backend, it offers:
+                  Solo-built and published cross-platform (iOS/Android/Web) educational app for preschoolers, live on
+                  Google Play under the Families program. Built a custom COPPA-compliant analytics system from scratch
+                  with zero PII/device-identifier collection, and authored the app's privacy policy. Designed a
+                  persistent game-state architecture (<strong>React Context</strong> + <strong>AsyncStorage</strong>)
+                  with debounced writes and crash-safe resumability, plus a literacy-based (not math-based) parental
+                  gate appropriate for pre-reading children. Bilingual (English/Spanish) content across 18 animals,
+                  with <strong>Lottie</strong> animations and voice narration.
                 </p>
+                <p><strong>Key Features:</strong></p>
                 <ul>
-                  <li>User authentication & role-based access (admin, landlord, tenant)</li>
-                  <li>Room & deposit management system</li>
-                  <li>Chat functionality between users</li>
-                  <li>Deposit request creation & approval workflows</li>
-                  <li>Role-specific dashboards</li>
-                  <li>Responsive design with Tailwind CSS</li>
-                  <li>Subtle animations via Framer Motion</li>
+                  <li>Custom COPPA/Google Play Families-compliant analytics (zero PII/device-ID collection)</li>
+                  <li>Persistent game-state architecture (React Context + AsyncStorage, debounced writes, crash-safe
+                    resumability)</li>
+                  <li>Literacy-based parental gate (numbers spelled as words, not math)</li>
+                  <li>Bilingual EN/ES: 18 animals, voice narration, Lottie animations</li>
+                  <li>Shipped through 3 major Expo/React Native SDK migrations (SDK 34→57, RN 0.74→0.86, React 18→19)
+                    with zero regressions</li>
                 </ul>
               </div>
-              <a href="https://damagedepositbank.com" target="_blank" rel="noreferrer"
-                class="cta-btn cta-btn--hero">View Online</a>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
+                href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
+                View on Google Play
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/EliLearnApp.git">
+                Source Code
+              </a>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/damageDepositProject.png"
-                  alt="Damage Deposit Bank SaaS platform screenshot" width="800" height="450" loading="lazy" />
-              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures" target="_blank"
+                rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
+        <!-- **** /END Project **** -->
 
         <div class="row">
           <div class="col-lg-4 col-sm-12">
@@ -457,6 +475,45 @@
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">
+                Damage Deposit Bank – Full-Stack SaaS Platform
+              </h3>
+              <p class="project-wrapper__text-note">(no longer actively maintained)</p>
+              <div class="project-description">
+                <p>
+                  Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
+                  from payment and holding to release—ensuring transparency and accountability. Built with
+                  Next.js + React on the frontend and Node.js + Express + MongoDB on the backend, it offers:
+                </p>
+                <ul>
+                  <li>User authentication & role-based access (admin, landlord, tenant)</li>
+                  <li>Room & deposit management system</li>
+                  <li>Chat functionality between users</li>
+                  <li>Deposit request creation & approval workflows</li>
+                  <li>Role-specific dashboards</li>
+                  <li>Responsive design with Tailwind CSS</li>
+                  <li>Subtle animations via Framer Motion</li>
+                </ul>
+              </div>
+              <a href="https://damagedepositbank.com" target="_blank" rel="noreferrer"
+                class="cta-btn cta-btn--hero">View Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/damageDepositProject.png"
+                  alt="Damage Deposit Bank SaaS platform screenshot" width="800" height="450" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- **** /END Project **** -->
+        <!-- **** Each .row is a project **** -->
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">
                 NASA Gallery - Mars Rover Photos
               </h3>
               <div>
@@ -497,52 +554,12 @@
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">
-                React Native Project - Animal Adventures
-              </h3>
-              <div>
-                <p class="mb-4">
-                  Mobile App built with <strong>React Native</strong>, I used the <strong>Expo SDK</strong> to
-                  generate native android/ios code, <strong>Figma</strong> to adapt the design and
-                  animations. Also using lootie files to generate animal
-                  movement and <strong>React Hooks</strong> to control audios and it's
-                  optimizations.
-                </p>
-              </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
-                href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
-                View on Google Play
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/EliLearnApp.git">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures" target="_blank"
-                rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-        <!-- **** Each .row is a project **** -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">
                 Mobile Project - Meals To Go
               </h3>
               <div>
                 <p class="mb-4">
                   Restaurant mobile App built with <strong>React Native</strong>, I used the Expo SDK to generate native
-                  Android/IOS code, lootie to generate animations, expo/native libraries to control the behavior of the
+                  Android/IOS code, Lottie to generate animations, expo/native libraries to control the behavior of the
                   status bar, the camera, manage user gestures, integrate this with google maps, add screen navigations,
                   and font integrations. I have also used <strong>Firebase</strong> to manage user registrations and
                   authentications. This was created in 2021 but is updated to 2023.

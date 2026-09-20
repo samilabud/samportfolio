@@ -44,6 +44,14 @@
         }
       }
 
+      &-note {
+        font-size: 1.4rem;
+        font-style: italic;
+        opacity: 0.75;
+        margin-top: -1rem;
+        margin-bottom: 1.8rem;
+      }
+
       & p > a {
         color: $secondary-color;
       }
