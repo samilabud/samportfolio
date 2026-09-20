@@ -44,16 +44,23 @@
         }
       }
 
-      &-note {
-        font-size: 1.4rem;
-        font-style: italic;
-        opacity: 0.75;
-        margin-top: -1rem;
-        margin-bottom: 1.8rem;
-      }
-
       & p > a {
         color: $secondary-color;
+      }
+    }
+
+    // Lists otherwise inherit Bootstrap's 1rem body size, which reads much
+    // smaller than the 1.6rem paragraphs around them.
+    .project-description {
+      ul:not(.project-stack) {
+        padding-left: 2rem;
+        margin-bottom: 1.6rem;
+
+        li {
+          font-size: 1.5rem;
+          line-height: 1.6;
+          margin-bottom: 0.5rem;
+        }
       }
     }
 
@@ -84,6 +91,155 @@
     }
   }
 
+  .project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+
+    &[hidden] {
+      display: none;
+    }
+
+    &__btn {
+      padding: 0.7rem 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $dark-blue-text;
+      background-color: transparent;
+      border: 1px solid rgba($secondary-color, 0.6);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: rgba($secondary-color, 0.15);
+      }
+
+      &:focus-visible {
+        outline: 2px solid $dark-blue-text;
+        outline-offset: 2px;
+      }
+
+      &.is-active {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
+  }
+
+  // While a filter is active, rows can't rely on ScrollReveal having
+  // measured them (they were display:none when it ran), so show them.
+  .project-wrapper.is-filtered .load-hidden,
+  .project-wrapper.is-filtered .project-wrapper__image {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .project-wrapper .row[hidden] {
+    display: none;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-tag {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: $dark-blue-text;
+    background-color: rgba($dark-blue-text, 0.07);
+    border: 1px solid rgba($dark-blue-text, 0.18);
+    border-radius: 999px;
+
+    &--client {
+      background-color: rgba($primary-color, 0.14);
+      border-color: rgba($primary-color, 0.5);
+    }
+
+    &--personal {
+      background-color: rgba($secondary-color, 0.16);
+      border-color: rgba($secondary-color, 0.55);
+    }
+
+    &--active {
+      background-color: transparent;
+      border-color: $dark-blue-text;
+    }
+
+    &--inactive,
+    &--coursework {
+      background-color: transparent;
+      border-style: dashed;
+      opacity: 0.85;
+    }
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.3rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $dark-blue-text;
+      background-color: rgba($secondary-color, 0.12);
+      border: 1px solid rgba($secondary-color, 0.35);
+      border-radius: 999px;
+    }
+  }
+
+  // "Key features" accordion inside a project card; mirrors the
+  // earlier-projects toggle so both collapsibles look related.
+  .project-details {
+    margin-top: 1.6rem;
+
+    &__toggle {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $secondary-color;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba($secondary-color, 0.4);
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        content: "▸ ";
+      }
+
+      &:focus-visible {
+        outline: 2px solid $dark-blue-text;
+        outline-offset: 4px;
+      }
+    }
+
+    &[open] &__toggle::before {
+      content: "▾ ";
+    }
+
+    &__body {
+      margin-top: 1.6rem;
+    }
+  }
+
   .earlier-projects {
     margin-top: 4rem;
     text-align: left;
@@ -109,6 +265,25 @@
 
     &[open] .earlier-projects__toggle::before {
       content: "▾ ";
+    }
+
+    &__subheading {
+      margin: 6rem 0 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid $light-grey;
+      font-size: 2rem;
+      font-weight: bold;
+
+      &[hidden] {
+        display: none;
+      }
+
+      span {
+        font-size: 1.4rem;
+        font-weight: 400;
+        opacity: 0.7;
+        margin-left: 0.8rem;
+      }
     }
 
     &__inner {

@@ -161,33 +161,70 @@
   <section id="skills">
     <div class="container">
       <h2 class="section-title dark-blue-text load-hidden">Skills &amp; Technologies</h2>
-      <div class="skills-grid load-hidden">
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Express</span>
-        <span class="skill-tag">React Native</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Supabase</span>
-        <span class="skill-tag">Tailwind CSS</span>
-        <span class="skill-tag">Redux</span>
-        <span class="skill-tag">Jest</span>
-        <span class="skill-tag">GraphQL</span>
-        <span class="skill-tag">Firebase</span>
-        <span class="skill-tag">Anthropic Claude API</span>
-        <span class="skill-tag">LLM Integration</span>
-        <span class="skill-tag">AI Document Extraction (Claude Vision)</span>
-        <span class="skill-tag">Prompt Engineering</span>
-        <span class="skill-tag">Prisma</span>
-        <span class="skill-tag">Inngest</span>
-        <span class="skill-tag">NextAuth</span>
-        <span class="skill-tag">JWT</span>
-        <span class="skill-tag">AWS (CDK/ECS/EKS)</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Playwright</span>
-        <span class="skill-tag">Zod</span>
+      <div class="skills-groups load-hidden">
+        <div class="skill-group skill-group--featured">
+          <h3 class="skill-group__title">AI &amp; LLM</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Anthropic Claude API</span>
+            <span class="skill-tag">LLM Integration</span>
+            <span class="skill-tag">AI Document Extraction (Claude Vision)</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Frontend</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Redux</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Mobile</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Expo</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Backend</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">Python / Django</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Inngest</span>
+            <span class="skill-tag">NextAuth</span>
+            <span class="skill-tag">JWT</span>
+            <span class="skill-tag">Zod</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Database</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Supabase</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Prisma</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Cloud &amp; DevOps</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">AWS (CDK/ECS/EKS)</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Testing</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Jest</span>
+            <span class="skill-tag">Playwright</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -200,10 +237,90 @@
         <h2 class="section-title dark-blue-text">
           Projects I've Worked On
         </h2>
-        <!-- ── NEW TOP PROJECT #1: RoomCity ── -->
-        <div class="row">
+        <div class="project-filters" role="group" aria-label="Filter projects" hidden>
+          <button type="button" class="project-filters__btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="project-filters__btn" data-filter="mobile" aria-pressed="false">Mobile apps</button>
+          <button type="button" class="project-filters__btn" data-filter="client" aria-pressed="false">Client work</button>
+          <button type="button" class="project-filters__btn" data-filter="personal" aria-pressed="false">Personal</button>
+        </div>
+        <!-- ── TOP PROJECT: Evercred ── -->
+        <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                Evercred – Healthcare Credentialing SaaS Platform
+              </h3>
+              <div class="project-description">
+                <p>
+                  Evercred is a multi-tenant healthcare credentialing platform serving physicians, healthcare
+                  enterprises, and internal admins. I solo-built and own the core product, including an AI-powered
+                  document-processing pipeline that extracts structured data (license numbers, names, dates) directly
+                  from uploaded credentialing documents using the Anthropic Claude API's vision capability — no
+                  traditional OCR engine involved.
+                </p>
+                <ul class="project-stack" aria-label="Tech stack">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>PostgreSQL</li>
+                  <li>Prisma</li>
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>Anthropic Claude API</li>
+                  <li>Stripe</li>
+                  <li>NextAuth</li>
+                  <li>Inngest</li>
+                  <li>AWS</li>
+                  <li>Docker</li>
+                </ul>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Three-portal architecture: physician, enterprise, and admin, with role-based access</li>
+                      <li>AI document pipeline: upload → S3 → Python/Django preprocessing → Claude API vision-based
+                        extraction → PostgreSQL → review UI</li>
+                      <li>Fixed a real production accuracy bug — Claude's extraction was only ~70% correct on certain
+                        document formats, so I added a validation step that cross-checks the result against the PDF's
+                        embedded text layer, raising accuracy to ~100%</li>
+                      <li>Authentication via NextAuth v5</li>
+                      <li>Stripe-powered subscription billing with webhook-driven state sync</li>
+                      <li>Background job processing via Inngest</li>
+                      <li>Multi-schema PostgreSQL data model (via Prisma) for tenant separation</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture & Dev Practices:</strong> Built with Next.js 14 (App Router) across a
+                      pnpm/Turborepo monorepo, TypeScript throughout, PostgreSQL with Prisma, Python/Django for document
+                      preprocessing, Anthropic Claude API for extraction, AWS (Terraform + EKS via Helm) for
+                      infrastructure, and S3/LocalStack for document storage.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/projectEvercred.png"
+                  alt="Evercred physician dashboard showing credential totals, sponsorship invitations, quick actions and recent activity"
+                  width="800" height="437" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TOP PROJECT: RoomCity ── -->
+        <div class="row" data-origin="client" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 RoomCity – Room Rental & Roommate Matching Platform
               </h3>
@@ -214,21 +331,25 @@
                   renters through features like real-time messaging, city-based room filtering, personalized
                   dashboards, and role-based access.
                 </p>
-                <p><strong>Key Features:</strong></p>
-                <ul>
-                  <li>Google OAuth authentication via NextAuth</li>
-                  <li>Dynamic room listing with filters (price, city, availability)</li>
-                  <li>Full messaging system between room seekers and landlords</li>
-                  <li>Status toggling for listings (“Rented” / “Not Listed”)</li>
-                  <li>Landlord dashboard with edit controls and reservation tracking</li>
-                  <li>Animated UI elements with Framer Motion</li>
-                  <li>Data fetching with SWR for optimized performance</li>
-                </ul>
-                <p>
-                  <strong>Architecture & Dev Practices:</strong> Built with Next.js for SSR/SEO, modular React
-                  components, MongoDB for data storage, Tailwind CSS for responsive design, TypeScript +
-                  ESLint + Prettier, and hosted on Vercel.
-                </p>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Google OAuth authentication via NextAuth</li>
+                      <li>Dynamic room listing with filters (price, city, availability)</li>
+                      <li>Full messaging system between room seekers and landlords</li>
+                      <li>Status toggling for listings (“Rented” / “Not Listed”)</li>
+                      <li>Landlord dashboard with edit controls and reservation tracking</li>
+                      <li>Animated UI elements with Framer Motion</li>
+                      <li>Data fetching with SWR for optimized performance</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture & Dev Practices:</strong> Built with Next.js for SSR/SEO, modular React
+                      components, MongoDB for data storage, Tailwind CSS for responsive design, TypeScript +
+                      ESLint + Prettier, and hosted on Vercel.
+                    </p>
+                  </div>
+                </details>
               </div>
               <a href="https://www.roomcity.ca/" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
                 Online</a>
@@ -246,9 +367,13 @@
         </div>
 
         <!-- ── NEW TOP PROJECT #2: SweepNSleep ── -->
-        <div class="row">
+        <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 SweepNSleep – Roommate Management Platform
               </h3>
@@ -285,9 +410,14 @@
         </div>
 
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="mobile">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 React Native Project - Animal Adventures
               </h3>
@@ -301,16 +431,20 @@
                   gate appropriate for pre-reading children. Bilingual (English/Spanish) content across 18 animals,
                   with <strong>Lottie</strong> animations and voice narration.
                 </p>
-                <p><strong>Key Features:</strong></p>
-                <ul>
-                  <li>Custom COPPA/Google Play Families-compliant analytics (zero PII/device-ID collection)</li>
-                  <li>Persistent game-state architecture (React Context + AsyncStorage, debounced writes, crash-safe
-                    resumability)</li>
-                  <li>Literacy-based parental gate (numbers spelled as words, not math)</li>
-                  <li>Bilingual EN/ES: 18 animals, voice narration, Lottie animations</li>
-                  <li>Shipped through 3 major Expo/React Native SDK migrations (SDK 34→57, RN 0.74→0.86, React 18→19)
-                    with zero regressions</li>
-                </ul>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Custom COPPA/Google Play Families-compliant analytics (zero PII/device-ID collection)</li>
+                      <li>Persistent game-state architecture (React Context + AsyncStorage, debounced writes, crash-safe
+                        resumability)</li>
+                      <li>Literacy-based parental gate (numbers spelled as words, not math)</li>
+                      <li>Bilingual EN/ES: 18 animals, voice narration, Lottie animations</li>
+                      <li>Shipped through 3 major Expo/React Native SDK migrations (SDK 34→57, RN 0.74→0.86, React 18→19)
+                        with zero regressions</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
                 href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
@@ -337,9 +471,12 @@
         </div>
         <!-- **** /END Project **** -->
 
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 ECommerce Platform built with <strong>React</strong>, <strong>Node.js</strong>,
                 <strong>Express</strong> and <strong>Supabase</strong>
@@ -381,9 +518,13 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="mobile">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 React Native Project - Lacta Consejos
               </h3>
@@ -426,9 +567,12 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 NextJS and NestJS Project - NextWeatherWatch
               </h3>
@@ -471,13 +615,16 @@
           <summary class="earlier-projects__toggle">Show earlier projects</summary>
           <div class="earlier-projects__inner">
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--inactive">No longer maintained</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 Damage Deposit Bank – Full-Stack SaaS Platform
               </h3>
-              <p class="project-wrapper__text-note">(no longer actively maintained)</p>
               <div class="project-description">
                 <p>
                   Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
@@ -510,9 +657,12 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 NASA Gallery - Mars Rover Photos
               </h3>
@@ -550,9 +700,13 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="mobile">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 Mobile Project - Meals To Go
               </h3>
@@ -588,10 +742,99 @@
           </div>
         </div>
         <!-- **** /END Project **** -->
+
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                React Project - ChartView
+              </h3>
+              <div>
+                <p class="mb-4">
+                  Web portal built with <strong>NextJS</strong>, uses the <strong>chart.js</strong> and
+                  <strong>lightweight-charts</strong> libraries to provide a live sample of how charts work and how they
+                  will be displayed on your website.
+                </p>
+              </div>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://chartviews.onrender.com/">
+                View Online
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/ChartViews">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://chartviews.onrender.com/" target="_blank" rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/ChartViewProject.jpg" alt="ChartView data visualization screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- **** /END Project **** -->
+        <!-- **** Each .row is a project **** -->
+        <div class="row" data-origin="personal" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                NextJS Project - JokeJoy
+              </h3>
+              <div>
+                <p class="mb-4">
+                  This is a full-responsive website based in Server Side Render (<strong>SSR</strong>) to get the most
+                  famous jokes of the world, this is based on the <a target="_blank" rel="noreferrer"
+                    href="https://github.com/samilabud/official_joke_api">Official Joke API</a>. This project makes it
+                  possible for anyone to enjoy the jokes from anywhere in the world. Technology stack:
+                  <strong>NextJS</strong>, <strong>React</strong>, <strong>Tailwind</strong>, <strong>CSS3</strong>,
+                  <strong>Jest</strong>, <strong>RTL</strong>, <strong>ESLint</strong>, <strong>Prettier</strong> and
+                  from scratch the <strong>UX/UI</strong>.
+                </p>
+              </div>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://jokejoy.onrender.com/">
+                View Online
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/JokeJoy">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://jokejoy.onrender.com/" target="_blank" rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/projectJokeJoy.jpg" alt="JokeJoy jokes website screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- **** /END Project **** -->
+        <h3 class="earlier-projects__subheading">
+          Learning projects <span>Zero to Mastery coursework</span>
+        </h3>
+        <!-- **** Each .row is a project **** -->
+        <div class="row" data-origin="coursework" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--coursework">Coursework</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 Web Project - E-commerce
               </h3>
@@ -630,9 +873,12 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="coursework" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
+              <div class="project-tags">
+                <span class="project-tag project-tag--coursework">Coursework</span>
+              </div>
               <h3 class="project-wrapper__text-title">
                 Web Project - FaceRecognition
               </h3>
@@ -671,87 +917,13 @@
           </div>
         </div>
         <!-- **** /END Project **** -->
-
         <!-- **** Each .row is a project **** -->
-        <div class="row">
+        <div class="row" data-origin="coursework" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">
-                React Project - ChartView
-              </h3>
-              <div>
-                <p class="mb-4">
-                  Web portal built with <strong>NextJS</strong>, uses the <strong>chart.js</strong> and
-                  <strong>lightweight-charts</strong> libraries to provide a live sample of how charts work and how they
-                  will be displayed on your website.
-                </p>
+              <div class="project-tags">
+                <span class="project-tag project-tag--coursework">Coursework</span>
               </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://chartviews.onrender.com/">
-                View Online
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/ChartViews">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://chartviews.onrender.com/" target="_blank" rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/ChartViewProject.jpg" alt="ChartView data visualization screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-        <!-- **** Each .row is a project **** -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">
-                NextJS Project - JokeJoy
-              </h3>
-              <div>
-                <p class="mb-4">
-                  This is a full-responsive website based in Server Side Render (<strong>SSR</strong>) to get the most
-                  famous jokes of the world, this is based on the <a target="_blank" rel="noreferrer"
-                    href="https://github.com/samilabud/official_joke_api">Official Joke API</a>. This project makes it
-                  possible for anyone to enjoy the jokes from anywhere in the world. Technology stack:
-                  <strong>NextJS</strong>, <strong>React</strong>, <strong>Tailwind</strong>, <strong>CSS3</strong>,
-                  <strong>Jest</strong>, <strong>RTL</strong>, <strong>ESLint</strong>, <strong>Prettier</strong> and
-                  from scratch the <strong>UX/UI</strong>.
-                </p>
-              </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero" href="https://jokejoy.onrender.com/">
-                View Online
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/JokeJoy">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://jokejoy.onrender.com/" target="_blank" rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectJokeJoy.jpg" alt="JokeJoy jokes website screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-        <!-- **** Each .row is a project **** -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">
                 Web Project - RoboFriends
               </h3>
