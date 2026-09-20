@@ -44,7 +44,7 @@ export const targetElements = [
     },
   },
   {
-    element: ".skills-grid",
+    element: ".skills-groups",
     animation: {
       delay: 400,
       origin: "bottom",
