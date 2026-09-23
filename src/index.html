@@ -409,6 +409,67 @@
           </div>
         </div>
 
+        <!-- ── TOP PROJECT: Damage Deposit Holder ── -->
+        <div class="row" data-origin="client" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                Damage Deposit Holder – Rental Deposit Dispute Mediation Platform
+              </h3>
+              <div class="project-description">
+                <p>
+                  A full-stack web app that mediates rental damage-deposit disputes between renters, landlords, and a
+                  neutral admin. Instead of a deposit sitting privately between two parties, all communication and
+                  proof-of-payment happens on a shared, moderated record tied to a specific property.
+                </p>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Houses: landlords list rental properties, admin publishes them, and renters browse published
+                        listings</li>
+                      <li>Subjects &amp; threaded chat: each house has topic threads where renters and landlords
+                        exchange messages and image attachments (e.g. e-transfer receipts)</li>
+                      <li>Admin moderation: every message starts unapproved until an admin reviews and approves it as
+                        part of the official record, with the ability to forward the full thread as an email
+                        transcript</li>
+                      <li>Notifications: the first message in a new thread auto-emails the admin via Nodemailer/SMTP
+                        so disputes and proofs don't go unnoticed</li>
+                      <li>Role-based accounts (renter / landlord / admin) via NextAuth credentials + JWT, plus a
+                        super-user flag for elevated admin management</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture &amp; Dev Practices:</strong> Next.js 15 (App Router, Turbopack) + React 19
+                      + TypeScript, MongoDB/Mongoose (Users, Houses, Subjects with embedded Messages), NextAuth.js
+                      credentials provider with bcrypt password hashing and JWT sessions, Tailwind CSS 4, Framer
+                      Motion and Headless UI for the UI, Nodemailer for transactional/admin email alerts, and
+                      react-dropzone for image/proof uploads. Server Components fetch data directly from MongoDB with
+                      explicit force-dynamic rendering for DB-backed pages, and API routes enforce role-based access
+                      control with server-side session checks.
+                    </p>
+                  </div>
+                </details>
+              </div>
+              <a href="https://www.damagedepositholder.com/" target="_blank" rel="noreferrer"
+                class="cta-btn cta-btn--hero">View Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/damageDepositProject.png"
+                  alt="Damage Deposit Holder moderated rental deposit dispute platform screenshot" width="800"
+                  height="450" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="mobile">
           <div class="col-lg-4 col-sm-12">
@@ -614,48 +675,6 @@
         <details class="earlier-projects">
           <summary class="earlier-projects__toggle">Show earlier projects</summary>
           <div class="earlier-projects__inner">
-        <!-- **** Each .row is a project **** -->
-        <div class="row" data-origin="client" data-platform="web">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text">
-              <div class="project-tags">
-                <span class="project-tag project-tag--client">Client project</span>
-                <span class="project-tag project-tag--inactive">No longer maintained</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                Damage Deposit Bank – Full-Stack SaaS Platform
-              </h3>
-              <div class="project-description">
-                <p>
-                  Damage Deposit Bank is a secure, modern SaaS platform that automates rental deposit workflows—
-                  from payment and holding to release—ensuring transparency and accountability. Built with
-                  Next.js + React on the frontend and Node.js + Express + MongoDB on the backend, it offers:
-                </p>
-                <ul>
-                  <li>User authentication & role-based access (admin, landlord, tenant)</li>
-                  <li>Room & deposit management system</li>
-                  <li>Chat functionality between users</li>
-                  <li>Deposit request creation & approval workflows</li>
-                  <li>Role-specific dashboards</li>
-                  <li>Responsive design with Tailwind CSS</li>
-                  <li>Subtle animations via Framer Motion</li>
-                </ul>
-              </div>
-              <a href="https://damagedepositbank.com" target="_blank" rel="noreferrer"
-                class="cta-btn cta-btn--hero">View Online</a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/damageDepositProject.png"
-                  alt="Damage Deposit Bank SaaS platform screenshot" width="800" height="450" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
