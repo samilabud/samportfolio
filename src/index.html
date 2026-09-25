@@ -129,13 +129,14 @@
               owning things end-to-end, whether that's an LLM integration or the platform around it.
             </p>
             <p class="about-wrapper__info-text">
-              Right now, I'm building the multi-tenant platform behind Evercred, a healthcare credentialing SaaS —
+              Right now, I'm on the team behind Evercred, a multi-tenant healthcare credentialing SaaS —
               physician, enterprise, and admin portals, plus an AI-powered document-processing pipeline: Python/Django
               handles preprocessing, then Claude's vision capability extracts structured data directly from document
-              images. I also fixed a real accuracy bug — extraction was only ~70% correct on certain formats, so I
-              added a validation step that cross-checks the result against the PDF's embedded text layer, raising
-              accuracy to ~100%. I'm also actively freelancing on Upwork, and I still enjoy building software from
-              scratch, hunting down bugs, and collaborating to ship great products.
+              images. I fixed and completed that pipeline — it existed but wasn't working reliably — and added a
+              fallback that cross-checks the PDF's embedded text layer when extraction fails validation, raising
+              accuracy on affected credential types from ~70% to ~100%. I'm also actively freelancing on Upwork, and I
+              still enjoy building software from scratch, hunting down bugs, and collaborating to ship great
+              products.
             </p>
             <span class="d-flex mt-3">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
@@ -256,10 +257,11 @@
               <div class="project-description">
                 <p>
                   Evercred is a multi-tenant healthcare credentialing platform serving physicians, healthcare
-                  enterprises, and internal admins. I solo-built and own the core product, including an AI-powered
-                  document-processing pipeline that extracts structured data (license numbers, names, dates) directly
-                  from uploaded credentialing documents using the Anthropic Claude API's vision capability — no
-                  traditional OCR engine involved.
+                  enterprises, and internal admins. Working on a team with a product owner and a dedicated QA team, I
+                  fixed and completed the platform's AI-powered document-processing pipeline — it existed but wasn't
+                  working reliably — which extracts structured data (license numbers, names, dates) directly from
+                  uploaded credentialing documents using the Anthropic Claude API's vision capability, no traditional
+                  OCR engine involved.
                 </p>
                 <ul class="project-stack" aria-label="Tech stack">
                   <li>Next.js</li>
@@ -282,9 +284,9 @@
                       <li>Three-portal architecture: physician, enterprise, and admin, with role-based access</li>
                       <li>AI document pipeline: upload → S3 → Python/Django preprocessing → Claude API vision-based
                         extraction → PostgreSQL → review UI</li>
-                      <li>Fixed a real production accuracy bug — Claude's extraction was only ~70% correct on certain
-                        document formats, so I added a validation step that cross-checks the result against the PDF's
-                        embedded text layer, raising accuracy to ~100%</li>
+                      <li>Fixed and completed the pipeline, which was unreliable, then added a fallback that
+                        cross-checks the result against the PDF's embedded text layer when extraction fails
+                        validation, raising accuracy on affected credential types from ~70% to ~100%</li>
                       <li>Authentication via NextAuth v5</li>
                       <li>Stripe-powered subscription billing with webhook-driven state sync</li>
                       <li>Background job processing via Inngest</li>
