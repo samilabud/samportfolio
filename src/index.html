@@ -315,83 +315,6 @@
           </div>
         </div>
 
-        <!-- ── TOP PROJECT: Discount Club Platform ── -->
-        <div class="row" data-origin="client" data-platform="web">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <div class="project-tags">
-                <span class="project-tag project-tag--client">Client project</span>
-                <span class="project-tag project-tag--active">Actively maintained</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                Discount Club Platform – Multi-Tenant SaaS Booking System
-              </h3>
-              <div class="project-description">
-                <p>
-                  A production, multi-tenant SaaS booking system built for a real client (Todd Ogryzlo / SNS
-                  Software), running two live domains — discountbnbclub.com and homestayclub.ca — from a single
-                  Next.js codebase deployed on Vercel. I own the full stack: schema design, passwordless auth,
-                  multi-tenant architecture, admin tooling, and email infrastructure.
-                </p>
-                <ul class="project-stack" aria-label="Tech stack">
-                  <li>Next.js</li>
-                  <li>React</li>
-                  <li>TypeScript</li>
-                  <li>Tailwind CSS</li>
-                  <li>MongoDB</li>
-                  <li>Mongoose</li>
-                  <li>Nodemailer</li>
-                  <li>Vercel</li>
-                </ul>
-                <details class="project-details">
-                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
-                  <div class="project-details__body">
-                    <ul>
-                      <li>Passwordless email verification: visitors register with an email, receive a 6-digit code
-                        (30-min TTL), and unlock booking only after verifying it</li>
-                      <li>Booking request flow: verified users submit a detailed form (BnB name, dates, vehicle,
-                        price expectation), triggering a confirmation email to the user and a rich HTML
-                        notification to the business owner</li>
-                      <li>Admin dashboard: a separate, code-verified admin login (allow-listed emails) protected by
-                        its own signed session cookie, with a full booking status workflow (pending → approved /
-                        rejected / contacted / completed) and a timestamped audit trail</li>
-                      <li>True multi-tenancy: a single deployment serves two branded domains, detecting the host at
-                        runtime to theme colors, email copy, and favicon per domain, while tagging every DB record
-                        with its origin domain</li>
-                      <li>Rate limiting &amp; abuse prevention: MongoDB-backed rate limiting on registration/
-                        verification attempts with TTL-based auto-expiry</li>
-                      <li>Security: HMAC-SHA256 signed, stateless session tokens (no server-side session store) for
-                        both users and admins, with distinct scopes/TTLs (24h user / 8h admin) and HTTP-only
-                        cookies</li>
-                    </ul>
-                    <p>
-                      <strong>Architecture &amp; Dev Practices:</strong> Next.js 16 (App Router, API routes,
-                      edge-ready) + React 19 + TypeScript, MongoDB via Mongoose 9 (TTL indexes, compound indexes,
-                      connection pooling), Tailwind CSS 4, Nodemailer over SMTP with Ethereal test-inbox previews in
-                      dev, and a hand-rolled passwordless/OTP auth flow with signed opaque session tokens instead of
-                      a third-party auth provider. Email sends are awaited before responding to avoid Vercel killing
-                      the function mid-send, and a single runtime host-detection utility drives theming, favicons,
-                      email branding, and DB partitioning across both domains.
-                    </p>
-                  </div>
-                </details>
-              </div>
-              <a href="https://discountbnbclub.com/" target="_blank" rel="noreferrer"
-                class="cta-btn cta-btn--hero">View Online</a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/projectDiscountBnbClub.png"
-                  alt="Discount BNB Club member landing page with Book Now button and How It Works steps"
-                  width="800" height="488" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- ── TOP PROJECT: RoomCity ── -->
         <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
@@ -483,6 +406,83 @@
                 class="thumbnail rounded js-tilt">
                 <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep roommate management screenshot"
                   width="800" height="450" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TOP PROJECT: Discount Club Platform ── -->
+        <div class="row" data-origin="client" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                Discount Club Platform – Multi-Tenant SaaS Booking System
+              </h3>
+              <div class="project-description">
+                <p>
+                  A production, multi-tenant SaaS booking system built for a real client (Todd Ogryzlo / SNS
+                  Software), running two live domains — discountbnbclub.com and homestayclub.ca — from a single
+                  Next.js codebase deployed on Vercel. I own the full stack: schema design, passwordless auth,
+                  multi-tenant architecture, admin tooling, and email infrastructure.
+                </p>
+                <ul class="project-stack" aria-label="Tech stack">
+                  <li>Next.js</li>
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                  <li>MongoDB</li>
+                  <li>Mongoose</li>
+                  <li>Nodemailer</li>
+                  <li>Vercel</li>
+                </ul>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Passwordless email verification: visitors register with an email, receive a 6-digit code
+                        (30-min TTL), and unlock booking only after verifying it</li>
+                      <li>Booking request flow: verified users submit a detailed form (BnB name, dates, vehicle,
+                        price expectation), triggering a confirmation email to the user and a rich HTML
+                        notification to the business owner</li>
+                      <li>Admin dashboard: a separate, code-verified admin login (allow-listed emails) protected by
+                        its own signed session cookie, with a full booking status workflow (pending → approved /
+                        rejected / contacted / completed) and a timestamped audit trail</li>
+                      <li>True multi-tenancy: a single deployment serves two branded domains, detecting the host at
+                        runtime to theme colors, email copy, and favicon per domain, while tagging every DB record
+                        with its origin domain</li>
+                      <li>Rate limiting &amp; abuse prevention: MongoDB-backed rate limiting on registration/
+                        verification attempts with TTL-based auto-expiry</li>
+                      <li>Security: HMAC-SHA256 signed, stateless session tokens (no server-side session store) for
+                        both users and admins, with distinct scopes/TTLs (24h user / 8h admin) and HTTP-only
+                        cookies</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture &amp; Dev Practices:</strong> Next.js 16 (App Router, API routes,
+                      edge-ready) + React 19 + TypeScript, MongoDB via Mongoose 9 (TTL indexes, compound indexes,
+                      connection pooling), Tailwind CSS 4, Nodemailer over SMTP with Ethereal test-inbox previews in
+                      dev, and a hand-rolled passwordless/OTP auth flow with signed opaque session tokens instead of
+                      a third-party auth provider. Email sends are awaited before responding to avoid Vercel killing
+                      the function mid-send, and a single runtime host-detection utility drives theming, favicons,
+                      email branding, and DB partitioning across both domains.
+                    </p>
+                  </div>
+                </details>
+              </div>
+              <a href="https://discountbnbclub.com/" target="_blank" rel="noreferrer"
+                class="cta-btn cta-btn--hero">View Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/projectDiscountBnbClub.png"
+                  alt="Discount BNB Club member landing page with Book Now button and How It Works steps"
+                  width="800" height="488" loading="lazy" />
               </div>
             </div>
           </div>
