@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../assets/favicon.png"
+    />
+    <link
+      rel="canonical"
+      href="https://samilabud.netlify.app/case-studies/evercred-document-extraction/"
+    />
+
+    <title>
+      Evercred: Document-Extraction Pipeline Case Study | Samil Abud
+    </title>
+    <meta
+      name="description"
+      content="Case study: taking a healthcare document-extraction pipeline built on the Claude API from ~70% to ~100% accuracy by cross-checking against a PDF's embedded text layer."
+    />
+    <meta name="author" content="Samil Abud" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://samilabud.netlify.app/case-studies/evercred-document-extraction/"
+    />
+    <meta
+      property="og:title"
+      content="Evercred: Document-Extraction Pipeline Case Study | Samil Abud"
+    />
+    <meta
+      property="og:description"
+      content="Case study: taking a healthcare document-extraction pipeline built on the Claude API from ~70% to ~100% accuracy by cross-checking against a PDF's embedded text layer."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Evercred: Document-Extraction Pipeline Case Study | Samil Abud"
+    />
+    <meta
+      name="twitter:description"
+      content="Case study: taking a healthcare document-extraction pipeline built on the Claude API from ~70% to ~100% accuracy by cross-checking against a PDF's embedded text layer."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../styles.scss" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="../../index.html">Samil Abud</a>
+          <ul class="site-nav__links">
+            <li><a href="../../index.html#about">About</a></li>
+            <li><a href="../../index.html#skills">Skills</a></li>
+            <li><a href="../../index.html#projects">Projects</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li>
+              <a
+                class="site-nav__cta cta-btn"
+                href="../../assets/Samil_Abud_FullStack_Engineer_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="case-study">
+        <div class="container">
+          <article class="case-study">
+            <a class="case-study__back" href="../../index.html#projects"
+              >← Back to portfolio</a
+            >
+
+            <header>
+              <span class="case-study__kicker">Case study</span>
+              <h1 class="case-study__title">
+                Taking a healthcare document-extraction pipeline from ~70% to
+                ~100% accuracy
+              </h1>
+              <div class="case-study__meta">
+                <p>
+                  <strong>Company:</strong> Evercred, a healthcare credentialing
+                  platform (physician, enterprise and admin apps). The company
+                  shut down in Sep 2026.
+                </p>
+                <p>
+                  <strong>My role:</strong> Senior Full-Stack &amp; AI Engineer.
+                  The extraction pipeline already existed but wasn't reliable in
+                  production. I took over the technical side, fixed it and
+                  completed it into a working production version. I worked with
+                  a product owner who set priorities and a dedicated QA team.
+                </p>
+                <p>
+                  <strong>Stack:</strong> Claude API (vision) · Python/Django ·
+                  AWS S3 · PostgreSQL (Prisma, multi-schema) · Next.js 14 ·
+                  Turborepo monorepo · Terraform + EKS
+                </p>
+              </div>
+              <blockquote>
+                Architecture only. No proprietary code, client data or internal
+                names.
+              </blockquote>
+            </header>
+
+            <div class="case-study__body">
+              <h2>The problem</h2>
+              <p>
+                Credentialing starts with paperwork: medical licenses,
+                certifications and IDs, each in a different format depending on
+                the state or issuing body. Someone has to copy license numbers,
+                names and dates into a system accurately, because a wrong
+                license number means a failed verification and a delayed
+                credential.
+              </p>
+              <p>
+                For context on why this matters (industry figures, not
+                Evercred's):
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.caqh.org/hubfs/43908627/drupal/solutions/proview/guide/provider-user-guide.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    >CAQH's own guide</a
+                  >
+                  says completing an initial provider data profile can take up
+                  to two hours.
+                </li>
+                <li>
+                  In an
+                  <a
+                    href="https://www.mgma.com/mgma-stat/confronting-credentialing-reappointment-crunch-time"
+                    target="_blank"
+                    rel="noreferrer"
+                    >MGMA poll from Nov 2025</a
+                  >, 32% of medical groups reported some kind of credentialing
+                  backlog.
+                </li>
+              </ul>
+              <p>
+                Evercred's pipeline was meant to remove the manual copying:
+                upload a document, get structured fields back, confirm them.
+              </p>
+
+              <h2>How the pipeline works</h2>
+              <pre><code>Upload (web app)
+   │
+   ▼
+S3 storage
+   │
+   ▼
+Python/Django preprocessing: page splitting and image prep (not traditional OCR)
+   │
+   ▼
+Claude API, vision-based extraction → structured fields (license number, name, dates)
+   │
+   ▼
+Validation layer ── per-field format checks
+   │                     │ fails?
+   │                     ▼
+   │               Cross-check against the PDF's embedded text layer
+   ▼
+PostgreSQL
+   │
+   ▼
+Human review: the practitioner confirms or corrects the extracted data in the UI</code></pre>
+              <ol>
+                <li>
+                  <strong>Intake.</strong> Documents are uploaded through the
+                  app and stored in S3.
+                </li>
+                <li>
+                  <strong>Preprocessing.</strong> A Django service splits pages
+                  and prepares images for the model.
+                </li>
+                <li>
+                  <strong>Extraction.</strong> Claude reads the document image
+                  directly and returns structured fields. There's no separate
+                  OCR step, so the model sees the layout the way a person would.
+                </li>
+                <li>
+                  <strong>Validation.</strong> Every extracted field is checked
+                  against the format rules for its type. This is where the
+                  accuracy fix lives (below).
+                </li>
+                <li>
+                  <strong>Human confirmation.</strong> The practitioner reviews
+                  and confirms the extracted data before it's treated as final.
+                  Nothing extracted by the model is accepted silently. (When a
+                  credential was shared with an enterprise, someone at that
+                  organization could also verify it. That was a separate flow
+                  outside this pipeline.)
+                </li>
+              </ol>
+
+              <h2>The accuracy fix (the centerpiece)</h2>
+              <p>
+                <strong>Symptom:</strong> on some license-number formats,
+                extraction was correct only about <strong>70%</strong> of the
+                time. For a credentialing product that's unusable: every wrong
+                number is a verification that fails later, in front of a
+                customer.
+              </p>
+              <p>
+                <strong>Fix:</strong> I added a validation step with a fallback
+                source of truth.
+              </p>
+              <ol>
+                <li>
+                  Validate each extracted license number against its expected
+                  format.
+                </li>
+                <li>
+                  If validation <strong>fails</strong>, don't trust the vision
+                  output. Check it against the
+                  <strong>PDF's embedded text layer</strong>, which is the
+                  actual text inside the PDF file, when the document has one.
+                </li>
+                <li>
+                  Use the confirmed value, then pass it to human review as
+                  usual.
+                </li>
+              </ol>
+              <p>
+                <strong>Result:</strong> accuracy on those formats went from
+                <strong>~70% to ~100%</strong>.
+              </p>
+              <p>
+                <strong>Why it works:</strong> vision models are strong at
+                layout and weak at being exactly right on long alphanumeric
+                strings. Many PDFs already carry the exact characters in their
+                text layer. Using the model for understanding and the text layer
+                for exactness, and only when validation says something's wrong,
+                gets the benefits of both without slowing down the documents
+                that were already fine.
+              </p>
+
+              <h2>What I'd add for a HIPAA-grade deployment</h2>
+              <p>
+                These weren't part of the Evercred pipeline. They're the next
+                layer I'd build for a product that handles patient health data,
+                depending on its compliance requirements:
+              </p>
+              <ul>
+                <li>
+                  <strong>Audit trail:</strong> who uploaded, viewed, edited or
+                  confirmed each field, and when, including which model version
+                  produced the value.
+                </li>
+                <li>
+                  <strong>Model access under a BAA</strong> (the vendor
+                  agreement HIPAA requires), for example Claude via AWS Bedrock
+                  or Anthropic's HIPAA offering.
+                </li>
+                <li>
+                  <strong>No patient data in logs or traces</strong>, with
+                  redaction at the logging layer.
+                </li>
+                <li>
+                  <strong>Measured accuracy as a CI gate:</strong> an evaluation
+                  suite that scores each field against labelled documents, so a
+                  prompt or model change can't quietly regress.
+                </li>
+              </ul>
+            </div>
+
+            <footer class="case-study__footer">
+              <p><strong>Sources for the industry context:</strong></p>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.caqh.org/hubfs/43908627/drupal/solutions/proview/guide/provider-user-guide.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    >CAQH Provider Data Portal user guide</a
+                  >
+                  (up to 2 hours for an initial profile)
+                </li>
+                <li>
+                  <a
+                    href="https://www.mgma.com/mgma-stat/confronting-credentialing-reappointment-crunch-time"
+                    target="_blank"
+                    rel="noreferrer"
+                    >MGMA Stat: credentialing and reappointment crunch time</a
+                  >
+                  (32% report a backlog)
+                </li>
+              </ul>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a href="#top" class="back-to-top" aria-label="Back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="https://twitter.com/samilabud"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on X (Twitter)"
+          >
+            <i class="fa fa-twitter fa-inverse" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samil-abud/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on LinkedIn"
+          >
+            <i class="fa fa-linkedin fa-inverse" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://github.com/samilabud"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on GitHub"
+          >
+            <i class="fa fa-github fa-inverse" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script defer type="module" src="../case-study.js"></script>
+  </body>
+</html>

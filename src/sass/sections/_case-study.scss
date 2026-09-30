@@ -1,0 +1,143 @@
+#case-study {
+  padding-top: 12rem;
+  text-align: left;
+
+  @include respond(phone) {
+    padding-top: 10rem;
+  }
+}
+
+.case-study {
+  max-width: 78rem;
+  margin: 0 auto;
+
+  &__back {
+    display: inline-block;
+    margin-bottom: 3.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $secondary-color;
+  }
+
+  &__kicker {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $dark-blue-text;
+    margin-bottom: 1.6rem;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__meta {
+    font-size: 1.5rem;
+    color: $dark-grey;
+    margin-bottom: 4rem;
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__body {
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: $dark-blue-text;
+      margin: 4.8rem 0 1.8rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $dark-blue-text;
+      margin: 3.2rem 0 1.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.75;
+      margin-bottom: 1.8rem;
+    }
+
+    ul,
+    ol {
+      padding-left: 2.2rem;
+      margin-bottom: 1.8rem;
+
+      li {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    strong {
+      color: $dark-blue-text;
+    }
+
+    a {
+      color: $secondary-color;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    blockquote {
+      margin: 0 0 1.8rem;
+      padding: 0.4rem 0 0.4rem 1.8rem;
+      border-left: 4px solid $secondary-color;
+      color: $dark-grey;
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+
+    pre {
+      background: $dark-blue-text;
+      color: $white-color;
+      padding: 2.4rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1.8rem;
+      font-size: 1.3rem;
+      line-height: 1.6;
+
+      code {
+        font-family: "Courier New", monospace;
+      }
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid $light-grey;
+      margin: 4rem 0;
+    }
+  }
+
+  &__footer {
+    margin-top: 4.8rem;
+    padding-top: 3.2rem;
+    border-top: 1px solid $light-grey;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../assets/favicon.png"
+    />
+    <link
+      rel="canonical"
+      href="https://samilabud.netlify.app/case-studies/animal-adventures-expo-upgrade/"
+    />
+
+    <title>Animal Adventures: Expo SDK 53 → 57 Upgrade | Samil Abud</title>
+    <meta
+      name="description"
+      content="Case study: upgrading a live Expo/React Native app from SDK 53 to 57 in one jump, including the Old to New Architecture migration and a move to Continuous Native Generation."
+    />
+    <meta name="author" content="Samil Abud" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://samilabud.netlify.app/case-studies/animal-adventures-expo-upgrade/"
+    />
+    <meta
+      property="og:title"
+      content="Animal Adventures: Expo SDK 53 → 57 Upgrade | Samil Abud"
+    />
+    <meta
+      property="og:description"
+      content="Case study: upgrading a live Expo/React Native app from SDK 53 to 57 in one jump, including the Old to New Architecture migration and a move to Continuous Native Generation."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Animal Adventures: Expo SDK 53 → 57 Upgrade | Samil Abud"
+    />
+    <meta
+      name="twitter:description"
+      content="Case study: upgrading a live Expo/React Native app from SDK 53 to 57 in one jump, including the Old to New Architecture migration and a move to Continuous Native Generation."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../styles.scss" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="../../index.html">Samil Abud</a>
+          <ul class="site-nav__links">
+            <li><a href="../../index.html#about">About</a></li>
+            <li><a href="../../index.html#skills">Skills</a></li>
+            <li><a href="../../index.html#projects">Projects</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li>
+              <a
+                class="site-nav__cta cta-btn"
+                href="../../assets/Samil_Abud_FullStack_Engineer_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="case-study">
+        <div class="container">
+          <article class="case-study">
+            <a class="case-study__back" href="../../index.html#projects"
+              >← Back to portfolio</a
+            >
+
+            <header>
+              <span class="case-study__kicker">Case study</span>
+              <h1 class="case-study__title">
+                Upgrading a live Expo app from SDK 53 to 57 in one jump
+              </h1>
+              <div class="case-study__meta">
+                <p>
+                  <strong>App:</strong> Animal Adventures, a bilingual (EN/ES)
+                  educational app for preschoolers. It's live on Google Play in
+                  the Families program and built with React Native + Expo. I
+                  designed, built and published it solo.
+                </p>
+                <p>
+                  <strong>Upgrade:</strong> Expo SDK 53 → 57 · React Native
+                  0.79.5 → 0.86.2 · React 19.0.0 → 19.2.3
+                </p>
+                <p>
+                  <strong>When:</strong> Main upgrade Aug 26, 2026, merged the
+                  next day. Follow-up fixes Sep 4 and Sep 21.
+                </p>
+                <p>
+                  <strong>Time spent:</strong> ~16 hours over 2 days for the
+                  upgrade, 1 day of full testing, then released to Google Play
+                </p>
+              </div>
+            </header>
+
+            <div class="case-study__body">
+              <h2>Why it couldn't wait</h2>
+              <p>
+                Google Play started requiring <code>targetSdk 36</code> for app
+                updates on <strong>Aug 31, 2026</strong>. My
+                <code>gradle.properties</code> pinned
+                <code>targetSdkVersion=35</code>, which would have blocked every
+                future update. Fixing that properly meant moving to a current
+                Expo SDK. Since React Native 0.82, that also means the
+                <strong>New Architecture</strong>: the old architecture no
+                longer exists.
+              </p>
+              <p>
+                So this was an architecture migration with a deadline, not a
+                routine dependency bump.
+              </p>
+
+              <h2>What I did</h2>
+
+              <h3>1. Jumped four SDK versions at once (53 → 57)</h3>
+              <p>
+                I did it in one pass instead of four separate upgrades, on its
+                own branch (<code>upgrade/expo-sdk-57</code>), merged the next
+                day as a single PR.
+              </p>
+
+              <h3>2. Migrated from the old to the New Architecture</h3>
+              <p>
+                The checked-in <code>MainApplication.kt</code> was still
+                force-disabling bridgeless mode, TurboModules and Fabric. Under
+                SDK 57 that would have broken the app.
+              </p>
+
+              <h3>3. Switched to Continuous Native Generation (CNG)</h3>
+              <p>
+                Instead of hand-patching old native code, I deleted the
+                checked-in <code>android/</code> and <code>ios/</code> folders
+                and let Expo Prebuild regenerate them from config. This removed
+                the stale flags and makes future upgrades much cheaper.
+              </p>
+
+              <h2>What broke (or would have)</h2>
+              <ul>
+                <li>
+                  <strong>An undeclared dependency.</strong> Three components
+                  used <code>@expo/vector-icons</code>, but it was never listed
+                  in <code>package.json</code>. It worked on SDK 53 only because
+                  it came bundled with <code>expo</code>. On SDK 57 it doesn't,
+                  so the build would have failed. Fix: declared it explicitly.
+                </li>
+                <li>
+                  <strong>A duplicate export.</strong>
+                  <code>constants/index.js</code> exported
+                  <code>COLORS</code> twice. Older tooling tolerated it and the
+                  new toolchain wouldn't. Fix: removed the duplicate.
+                </li>
+                <li>
+                  <strong>Dead weight.</strong> I removed
+                  <code>@react-navigation/*</code>,
+                  <code>styled-components</code>, <code>expo-av</code>,
+                  <code>react-native-gesture-handler</code>,
+                  <code>react-native-screens</code> and unused Babel aliases,
+                  after checking that each had zero imports. Fewer packages
+                  means fewer things that can break the next upgrade.
+                </li>
+              </ul>
+
+              <h2>After the merge</h2>
+              <ul>
+                <li>
+                  <strong>Sep 4:</strong> <code>expo-doctor</code> flagged six
+                  packages behind their expected patch versions. I aligned them.
+                </li>
+                <li>
+                  <strong>Sep 21:</strong> local iOS builds broke on Xcode 26.2.
+                  Swift 6.2.3 rejected some Swift concurrency attributes in
+                  <code>expo-modules-jsi</code>, and SDK 57 officially wants
+                  Xcode 26.4+. I didn't want to wait for an upstream fix or
+                  downgrade Xcode, so I
+                  <strong
+                    >patched the installed package with
+                    <code>patch-package</code></strong
+                  >, set to apply automatically on <code>postinstall</code>.
+                </li>
+              </ul>
+
+              <h2>Result</h2>
+              <ul>
+                <li>
+                  The app is on the current SDK and the New Architecture, and
+                  meets Google Play's targetSdk 36 rule for updates.
+                </li>
+                <li>
+                  The native folders are now generated, not hand-maintained, so
+                  the next upgrade is a config change instead of a native-code
+                  excavation.
+                </li>
+                <li>
+                  Upgrade to production in about 4 days: ~2 days of upgrade
+                  work, 1 day of full testing, and the release to Google Play
+                  the day after.
+                </li>
+              </ul>
+            </div>
+
+            <footer class="case-study__footer">
+              <p>
+                <strong>Stack:</strong> React Native · Expo (EAS Build,
+                Prebuild/CNG) · Kotlin/Gradle config · Xcode/Swift toolchain ·
+                patch-package
+              </p>
+              <p>
+                <strong>Link:</strong>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Animal Adventures on Google Play</a
+                >
+              </p>
+              <p>
+                <strong>The actual code changes (public):</strong>
+                <a
+                  href="https://github.com/samilabud/EliLearnApp/pull/3"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Upgrade PR #3: Expo SDK 57 + CNG</a
+                >
+                ·
+                <a
+                  href="https://github.com/samilabud/EliLearnApp/pull/8"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Xcode 26.2 fix PR #8</a
+                >
+              </p>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a href="#top" class="back-to-top" aria-label="Back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="https://twitter.com/samilabud"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on X (Twitter)"
+          >
+            <i class="fa fa-twitter fa-inverse" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samil-abud/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on LinkedIn"
+          >
+            <i class="fa fa-linkedin fa-inverse" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://github.com/samilabud"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Samil on GitHub"
+          >
+            <i class="fa fa-github fa-inverse" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script defer type="module" src="../case-study.js"></script>
+  </body>
+</html>
