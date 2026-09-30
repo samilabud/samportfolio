@@ -7,9 +7,9 @@
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
   <link rel="canonical" href="https://samilabud.netlify.app/" />
 
-  <title>Samil Abud | Full-Stack Web Developer</title>
+  <title>Samil Abud | Senior Full-Stack &amp; AI Engineer</title>
   <meta name="description"
-    content="Samil Abud — Full-Stack Developer specializing in React, Next.js, Node.js, and TypeScript. Portfolio of SaaS, mobile, and e-commerce products. Freelance developer at Expensify via Upwork." />
+    content="Samil Abud — Senior Full-Stack &amp; AI Engineer specializing in React, Next.js, Node.js, and TypeScript. Portfolio of SaaS, mobile, and e-commerce products. Freelance developer at Expensify via Upwork." />
   <meta name="author" content="Samil Abud" />
   <meta name="robots" content="index, follow" />
 
@@ -99,8 +99,12 @@
       <h1 class="hero-title load-hidden">
         Hi, my name is <span class="text-color-main">Samil Abud</span>
         <br />
-        I'm a Full-Stack Web Developer!
+        I'm a Senior Full-Stack &amp; AI Engineer!
       </h1>
+      <p class="hero-subtitle load-hidden">
+        10+ years building production SaaS with Next.js, TypeScript and Node.js. Claude API document workflows for
+        healthcare, React Native/Expo apps on Google Play.
+      </p>
       <p class="hero-cta load-hidden">
         <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#projects">View Projects</a>
         <a rel="noreferrer" class="cta-btn cta-btn--hero" href="assets/Samil_Abud_FullStack_Engineer_Resume.pdf" target="_blank">Resume</a>
@@ -249,7 +253,7 @@
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
               <div class="project-tags">
-                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--client">Client project · 2025–2026</span>
               </div>
               <h3 class="project-wrapper__text-title">
                 Evercred – Healthcare Credentialing SaaS Platform
@@ -301,6 +305,10 @@
                   </div>
                 </details>
               </div>
+              <a rel="noreferrer" class="cta-btn text-color-main"
+                href="case-studies/evercred-document-extraction/index.html">
+                Case study
+              </a>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -314,103 +322,77 @@
             </div>
           </div>
         </div>
-
-        <!-- ── TOP PROJECT: RoomCity ── -->
-        <div class="row" data-origin="client" data-platform="web">
+        <!-- **** Each .row is a project **** -->
+        <div class="row" data-origin="personal" data-platform="mobile">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
               <div class="project-tags">
-                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
                 <span class="project-tag project-tag--active">Actively maintained</span>
               </div>
               <h3 class="project-wrapper__text-title">
-                RoomCity – Room Rental & Roommate Matching Platform
+                React Native Project - Animal Adventures
               </h3>
               <div class="project-description">
                 <p>
-                  RoomCity is a full-stack web application designed to simplify the process of finding rooms,
-                  roommates, and managing listings. It offers a seamless user experience for both landlords and
-                  renters through features like real-time messaging, city-based room filtering, personalized
-                  dashboards, and role-based access.
+                  Solo-built and published cross-platform (iOS/Android/Web) educational app for preschoolers, live on
+                  Google Play under the Families program. Built a custom COPPA-compliant analytics system from scratch
+                  with zero PII/device-identifier collection, and authored the app's privacy policy. Designed a
+                  persistent game-state architecture (<strong>React Context</strong> + <strong>AsyncStorage</strong>)
+                  with debounced writes and crash-safe resumability, plus a literacy-based (not math-based) parental
+                  gate appropriate for pre-reading children. Bilingual (English/Spanish) content across 18 animals,
+                  with <strong>Lottie</strong> animations and voice narration.
                 </p>
                 <details class="project-details">
-                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <summary class="project-details__toggle">Key features</summary>
                   <div class="project-details__body">
                     <ul>
-                      <li>Google OAuth authentication via NextAuth</li>
-                      <li>Dynamic room listing with filters (price, city, availability)</li>
-                      <li>Full messaging system between room seekers and landlords</li>
-                      <li>Status toggling for listings (“Rented” / “Not Listed”)</li>
-                      <li>Landlord dashboard with edit controls and reservation tracking</li>
-                      <li>Animated UI elements with Framer Motion</li>
-                      <li>Data fetching with SWR for optimized performance</li>
+                      <li>Custom COPPA/Google Play Families-compliant analytics (zero PII/device-ID collection)</li>
+                      <li>Persistent game-state architecture (React Context + AsyncStorage, debounced writes, crash-safe
+                        resumability)</li>
+                      <li>Literacy-based parental gate (numbers spelled as words, not math)</li>
+                      <li>Bilingual EN/ES: 18 animals, voice narration, Lottie animations</li>
+                      <li>Upgraded from Expo SDK 53 to 57 in one jump (React Native 0.79 → 0.86, React 19.0 → 19.2),
+                        including the Old → New Architecture migration and a move to Continuous Native Generation
+                        (CNG). About 2 days of work plus 1 day of testing before release to Google Play.</li>
                     </ul>
-                    <p>
-                      <strong>Architecture & Dev Practices:</strong> Built with Next.js for SSR/SEO, modular React
-                      components, MongoDB for data storage, Tailwind CSS for responsive design, TypeScript +
-                      ESLint + Prettier, and hosted on Vercel.
+                    <p class="project-details__links">
+                      <a href="https://github.com/samilabud/EliLearnApp/pull/3" target="_blank" rel="noreferrer">Upgrade PR #3: Expo SDK 57 + CNG</a>
+                      ·
+                      <a href="https://github.com/samilabud/EliLearnApp/pull/8" target="_blank" rel="noreferrer">Xcode 26.2 fix PR #8</a>
                     </p>
                   </div>
                 </details>
               </div>
-              <a href="https://www.roomcity.ca/" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
-                Online</a>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
+                href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
+                View on Google Play
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/EliLearnApp.git">
+                Source Code
+              </a>
+              <a rel="noreferrer" class="cta-btn text-color-main"
+                href="case-studies/animal-adventures-expo-upgrade/index.html">
+                Case study
+              </a>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/projectRoomCity.png" alt="RoomCity room rental platform screenshot"
-                  width="800" height="450" loading="lazy" />
-              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures" target="_blank"
+                rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- ── NEW TOP PROJECT #2: SweepNSleep ── -->
-        <div class="row" data-origin="client" data-platform="web">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <div class="project-tags">
-                <span class="project-tag project-tag--client">Client project</span>
-                <span class="project-tag project-tag--active">Actively maintained</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                SweepNSleep – Roommate Management Platform
-              </h3>
-              <div class="project-description">
-                <p>
-                  SweepNSleep is a full-featured web application designed to simplify household management for
-                  roommates and landlords. Built with React, Redux, React Bootstrap and Tailwind CSS on the frontend
-                  and Node.js, Express.js, MongoDB + Mongoose on the backend, it delivers:
-                </p>
-                <ul>
-                  <li>Real-time roommate chat system</li>
-                  <li>Lease tracking with digital signatures</li>
-                  <li>Payment reminders and status tracking</li>
-                  <li>Task assignment (chore tracking)</li>
-                  <li>Sticky notes for admin reminders</li>
-                  <li>Admin-controlled, multi-role access (admin, landlord, roommate, neatkeeper)</li>
-                </ul>
-                <p>Authentication via JWT and protected routes via custom middleware. Tested with Jest & React Testing
-                  Library.</p>
-              </div>
-              <a href="https://sweepnsleep.com" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
-                Online</a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep roommate management screenshot"
-                  width="800" height="450" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- **** /END Project **** -->
         <!-- ── TOP PROJECT: Discount Club Platform ── -->
         <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
@@ -487,14 +469,106 @@
             </div>
           </div>
         </div>
-
-        <!-- ── TOP PROJECT: Damage Deposit Holder ── -->
+        <!-- ── TOP PROJECT: RoomCity ── -->
         <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
               <div class="project-tags">
                 <span class="project-tag project-tag--client">Client project</span>
                 <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                RoomCity – Room Rental & Roommate Matching Platform
+              </h3>
+              <div class="project-description">
+                <p>
+                  RoomCity is a full-stack web application designed to simplify the process of finding rooms,
+                  roommates, and managing listings. It offers a seamless user experience for both landlords and
+                  renters through features like real-time messaging, city-based room filtering, personalized
+                  dashboards, and role-based access.
+                </p>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Google OAuth authentication via NextAuth</li>
+                      <li>Dynamic room listing with filters (price, city, availability)</li>
+                      <li>Full messaging system between room seekers and landlords</li>
+                      <li>Status toggling for listings (“Rented” / “Not Listed”)</li>
+                      <li>Landlord dashboard with edit controls and reservation tracking</li>
+                      <li>Animated UI elements with Framer Motion</li>
+                      <li>Data fetching with SWR for optimized performance</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture & Dev Practices:</strong> Built with Next.js for SSR/SEO, modular React
+                      components, MongoDB for data storage, Tailwind CSS for responsive design, TypeScript +
+                      ESLint + Prettier, and hosted on Vercel.
+                    </p>
+                  </div>
+                </details>
+              </div>
+              <a href="https://www.roomcity.ca/" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
+                Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/projectRoomCity.png" alt="RoomCity room rental platform screenshot"
+                  width="800" height="450" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ── NEW TOP PROJECT #2: SweepNSleep ── -->
+        <div class="row" data-origin="client" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
+                <span class="project-tag project-tag--active">Actively maintained</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                SweepNSleep – Roommate Management Platform
+              </h3>
+              <div class="project-description">
+                <p>
+                  SweepNSleep is a full-featured web application designed to simplify household management for
+                  roommates and landlords. Built with React, Redux, React Bootstrap and Tailwind CSS on the frontend
+                  and Node.js, Express.js, MongoDB + Mongoose on the backend, it delivers:
+                </p>
+                <ul>
+                  <li>Real-time roommate chat system</li>
+                  <li>Lease tracking with digital signatures</li>
+                  <li>Payment reminders and status tracking</li>
+                  <li>Task assignment (chore tracking)</li>
+                  <li>Sticky notes for admin reminders</li>
+                  <li>Admin-controlled, multi-role access (admin, landlord, roommate, neatkeeper)</li>
+                </ul>
+                <p>Authentication via JWT and protected routes via custom middleware. Tested with Jest & React Testing
+                  Library.</p>
+              </div>
+              <a href="https://sweepnsleep.com" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
+                Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/sweepAndSleep.png" alt="SweepNSleep roommate management screenshot"
+                  width="800" height="450" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ── TOP PROJECT: Damage Deposit Holder ── -->
+        <div class="row" data-origin="client" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--client">Client project</span>
               </div>
               <h3 class="project-wrapper__text-title">
                 Damage Deposit Holder – Rental Deposit Dispute Mediation Platform
@@ -548,69 +622,6 @@
             </div>
           </div>
         </div>
-
-        <!-- **** Each .row is a project **** -->
-        <div class="row" data-origin="personal" data-platform="mobile">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <div class="project-tags">
-                <span class="project-tag project-tag--personal">Personal project</span>
-                <span class="project-tag project-tag--mobile">Mobile app</span>
-                <span class="project-tag project-tag--active">Actively maintained</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                React Native Project - Animal Adventures
-              </h3>
-              <div class="project-description">
-                <p>
-                  Solo-built and published cross-platform (iOS/Android/Web) educational app for preschoolers, live on
-                  Google Play under the Families program. Built a custom COPPA-compliant analytics system from scratch
-                  with zero PII/device-identifier collection, and authored the app's privacy policy. Designed a
-                  persistent game-state architecture (<strong>React Context</strong> + <strong>AsyncStorage</strong>)
-                  with debounced writes and crash-safe resumability, plus a literacy-based (not math-based) parental
-                  gate appropriate for pre-reading children. Bilingual (English/Spanish) content across 18 animals,
-                  with <strong>Lottie</strong> animations and voice narration.
-                </p>
-                <details class="project-details">
-                  <summary class="project-details__toggle">Key features</summary>
-                  <div class="project-details__body">
-                    <ul>
-                      <li>Custom COPPA/Google Play Families-compliant analytics (zero PII/device-ID collection)</li>
-                      <li>Persistent game-state architecture (React Context + AsyncStorage, debounced writes, crash-safe
-                        resumability)</li>
-                      <li>Literacy-based parental gate (numbers spelled as words, not math)</li>
-                      <li>Bilingual EN/ES: 18 animals, voice narration, Lottie animations</li>
-                      <li>Shipped through 3 major Expo/React Native SDK migrations (SDK 34→57, RN 0.74→0.86, React 18→19)
-                        with zero regressions</li>
-                    </ul>
-                  </div>
-                </details>
-              </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
-                href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures">
-                View on Google Play
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/EliLearnApp.git">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures" target="_blank"
-                rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
@@ -707,6 +718,49 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
+        <div class="row" data-origin="personal" data-platform="mobile">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                Mobile Project - Meals To Go
+              </h3>
+              <div>
+                <p class="mb-4">
+                  Restaurant mobile App built with <strong>React Native</strong>, I used the Expo SDK to generate native
+                  Android/IOS code, Lottie to generate animations, expo/native libraries to control the behavior of the
+                  status bar, the camera, manage user gestures, integrate this with google maps, add screen navigations,
+                  and font integrations. I have also used <strong>Firebase</strong> to manage user registrations and
+                  authentications. This was created in 2021 but is updated to 2023.
+                </p>
+              </div>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
+                href="https://youtube.com/shorts/9FJJ3gwoB94?feature=share">
+                View Demo
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/MealsToGo">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://github.com/samilabud/MealsToGo" target="_blank" rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go restaurant app screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- **** /END Project **** -->
+        <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
@@ -749,10 +803,9 @@
           </div>
         </div>
         <!-- **** /END Project **** -->
-
-        <!-- **** Earlier Projects (bootcamp / tutorial work) **** -->
+        <!-- **** Earlier work & coursework **** -->
         <details class="earlier-projects">
-          <summary class="earlier-projects__toggle">Show earlier projects</summary>
+          <summary class="earlier-projects__toggle">Earlier work &amp; coursework</summary>
           <div class="earlier-projects__inner">
         <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
@@ -782,6 +835,7 @@
                 href="https://github.com/samilabud/NasaGallery?tab=readme-ov-file">
                 Source Code
               </a>
+              <p class="project-demo-note">Free-tier hosting — may take about a minute to load.</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -797,50 +851,6 @@
           </div>
         </div>
         <!-- **** /END Project **** -->
-        <!-- **** Each .row is a project **** -->
-        <div class="row" data-origin="personal" data-platform="mobile">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text">
-              <div class="project-tags">
-                <span class="project-tag project-tag--personal">Personal project</span>
-                <span class="project-tag project-tag--mobile">Mobile app</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                Mobile Project - Meals To Go
-              </h3>
-              <div>
-                <p class="mb-4">
-                  Restaurant mobile App built with <strong>React Native</strong>, I used the Expo SDK to generate native
-                  Android/IOS code, Lottie to generate animations, expo/native libraries to control the behavior of the
-                  status bar, the camera, manage user gestures, integrate this with google maps, add screen navigations,
-                  and font integrations. I have also used <strong>Firebase</strong> to manage user registrations and
-                  authentications. This was created in 2021 but is updated to 2023.
-                </p>
-              </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
-                href="https://youtube.com/shorts/9FJJ3gwoB94?feature=share">
-                View Demo
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/MealsToGo">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://github.com/samilabud/MealsToGo" target="_blank" rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go restaurant app screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-
         <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
@@ -865,6 +875,7 @@
                 href="https://github.com/samilabud/ChartViews">
                 Source Code
               </a>
+              <p class="project-demo-note">Free-tier hosting — may take about a minute to load.</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -908,6 +919,8 @@
                 href="https://github.com/samilabud/JokeJoy">
                 Source Code
               </a>
+              <p class="project-demo-note">Free-tier hosting — may take a minute or more to wake up, or time out;
+                the source code link always works.</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -944,7 +957,8 @@
                   integrated with <strong>Stripe</strong> and with
                   <strong>Firebase</strong>. You can register and try to buy any item from your
                   PC or from your Mobile. This use an API created by me called <a
-                    href="https://samecommercews.onrender.com" target="_blank">samecommercews</a>
+                    href="https://samecommercews.onrender.com" target="_blank" rel="noreferrer">samecommercews</a>
+                  (free-tier hosting — may take about a minute to wake up).
                 </p>
               </div>
               <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
@@ -955,6 +969,7 @@
                 href="https://github.com/samilabud/ZeroToMasteryEcommerce">
                 Source Code
               </a>
+              <p class="project-demo-note">Free-tier hosting — may take about a minute to load.</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -985,7 +1000,8 @@
                   Final Project created with Zero to Mastery team (The
                   Complete Web Developer in 2020). Built with React (<strong>HTML</strong>,
                   <strong>CSS</strong>, <strong>JavaScript</strong>), this uses an <a
-                    href="https://api-face-recognition.onrender.com/" target="_blank">API</a> also created by
+                    href="https://api-face-recognition.onrender.com/" target="_blank" rel="noreferrer">API</a>
+                  (free-tier hosting — may take about a minute to wake up) also created by
                   me, at general way is based in <strong>NodeJS</strong>, <strong>Express</strong>,
                   <strong>PostgreSQL</strong>
                   with <strong>KnexJS</strong>. You can register and try to scan any image and
@@ -1000,6 +1016,7 @@
                 href="https://github.com/samilabud/WebFaceRecognition.git">
                 Source Code
               </a>
+              <p class="project-demo-note">Free-tier hosting — may take about a minute to load.</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">

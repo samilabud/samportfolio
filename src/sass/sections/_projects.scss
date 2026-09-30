@@ -202,6 +202,14 @@
     }
   }
 
+  // Heads-up next to a free-tier-hosted demo link so a slow cold start
+  // doesn't read as a broken link.
+  .project-demo-note {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    opacity: 0.7;
+  }
+
   // "Key features" accordion inside a project card; mirrors the
   // earlier-projects toggle so both collapsibles look related.
   .project-details {

@@ -4,9 +4,9 @@
   "private": true,
   "description": "A clean, beautiful and responsive portfolio!",
   "scripts": {
-    "start": "parcel src/index.html src/google85fd8c9ec2bbd804.html",
-    "build": "parcel build src/index.html src/google85fd8c9ec2bbd804.html",
-    "gh-pages-build": "parcel build src/index.html src/google85fd8c9ec2bbd804.html --public-url ."
+    "start": "parcel src/index.html src/google85fd8c9ec2bbd804.html src/case-studies/*/index.html",
+    "build": "parcel build src/index.html src/google85fd8c9ec2bbd804.html src/case-studies/*/index.html",
+    "gh-pages-build": "parcel build src/index.html src/google85fd8c9ec2bbd804.html src/case-studies/*/index.html --public-url ."
   },
   "repository": {
     "type": "git",
