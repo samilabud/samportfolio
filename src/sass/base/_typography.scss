@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+// Montserrat is loaded via a <link> in <head> (with display=swap), not a
+// CSS @import — an @import here forced the browser to download and parse
+// this whole stylesheet before it could even discover the font request.
 
 h1 {
   font-weight: 700;

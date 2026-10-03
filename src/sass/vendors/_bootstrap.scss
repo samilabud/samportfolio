@@ -1,1 +1,17 @@
-@import "~bootstrap/scss/bootstrap";
+// Only the Bootstrap partials this project actually uses (grid, a few
+// spacing/flex utilities, img-fluid, rounded, shadow-lg) — importing the
+// full bundle pulled in forms, navbar, modal, carousel, etc. that are
+// never rendered on this site and showed up as ~23 KiB of unused CSS.
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+
+@import "~bootstrap/scss/utilities/api";

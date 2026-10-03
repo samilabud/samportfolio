@@ -35,6 +35,17 @@
   }
 }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+
+  &--lg {
+    width: 2em;
+    height: 2em;
+  }
+}
+
 .social-links {
   display: flex;
   flex-direction: row;
@@ -57,7 +68,7 @@
   }
 }
 
-.back-to-top i {
+.back-to-top .icon {
   color: $white-color;
   margin: 1rem 0 $default-font-size;
   transition: all 0.2s ease-in;
