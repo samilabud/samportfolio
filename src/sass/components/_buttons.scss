@@ -70,6 +70,20 @@
   }
 }
 
+/* Primary Hero CTA — solid fill, stands out from the outlined secondary buttons */
+.cta-btn--primary {
+  color: $white-color !important;
+  -webkit-text-fill-color: $white-color;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  border: 2px solid transparent;
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+    opacity: 0.88;
+  }
+}
+
 /* Resume Style */
 .cta-btn--resume {
   color: $white-color;
