@@ -579,6 +579,47 @@
             </div>
           </div>
         </div>
+        <!-- ── NEW TOP PROJECT: StoryKeep ── -->
+        <div class="row" data-origin="personal" data-platform="web">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                StoryKeep – Subscriptions, Webhooks and PDF/DOCX Export
+              </h3>
+              <div class="project-description">
+                <p>
+                  StoryKeep is a personal project I built and tested with AI assistance (Claude Code), running in
+                  Stripe test mode. It lets a user answer a questionnaire, get a Claude-written draft of a life
+                  story, edit it with version history, and download it as PDF or DOCX.
+                </p>
+                <ul>
+                  <li>Stripe subscriptions with dunning (grace period, retries, cancellation), checked with Stripe
+                    test clocks</li>
+                  <li>Signature-verified, replay-safe webhooks that handle out-of-order events</li>
+                  <li>Claude generation in idempotent background jobs with retries and a per-user cost cap</li>
+                  <li>PDF and DOCX export from one content model</li>
+                  <li>191 automated tests, browser tests and CI on GitHub Actions</li>
+                </ul>
+                <p>Stack: Next.js, TypeScript, PostgreSQL, Stripe, Anthropic Claude, Vercel.</p>
+              </div>
+              <a href="https://storykeep-one.vercel.app" target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero">View
+                Online</a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                class="thumbnail rounded js-tilt">
+                <img class="img-fluid" src="./assets/projectStoryKeep.png"
+                  alt="StoryKeep story editor with version history and PDF/DOCX export, stacked above its Stripe test-mode webhook deliveries log showing subscription and invoice events all returning 200 OK"
+                  width="1604" height="2195" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- ── NEW TOP PROJECT #6: Tenant-Pay ── -->
         <div class="row" data-origin="client" data-platform="web">
           <div class="col-lg-4 col-sm-12">
