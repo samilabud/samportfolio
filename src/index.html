@@ -735,21 +735,56 @@
                 <span class="project-tag project-tag--client">Client project</span>
               </div>
               <h3 class="project-wrapper__text-title">
-                MyMedDiary – Health Research Dashboard
+                MyMedDiary – Nutrition &amp; Symptom Research Dashboard
               </h3>
               <div class="project-description">
                 <p>
-                  A React dashboard built for health research data, with chart-heavy views for reviewing and
-                  comparing patient-reported data over time.
+                  A web portal where researchers and doctors run studies on nutrition and symptom data that
+                  patients log in the myMedDiary mobile app, replacing the 24-hour recall method. On a 17-person
+                  team, I was the second-largest contributor with 177 commits across all branches, touching
+                  roughly 667 files.
                 </p>
+                <details class="project-details">
+                  <summary class="project-details__toggle">Key features &amp; architecture</summary>
+                  <div class="project-details__body">
+                    <ul>
+                      <li>Study Dashboard with study overview cards, patient analytics, and charts for
+                        macronutrients, micronutrients, calories and symptoms over time</li>
+                      <li>Symptom treemap with a matching table, category filters, and per-patient symptom
+                        charts</li>
+                      <li>Patient Directory and individual patient profiles with data grids and profile charts</li>
+                      <li>CSV data export, including multi-file downloads with symptom data</li>
+                      <li>Study management: multi-step New Study modal, client listing, and study deletion</li>
+                      <li>Home Diary inactive-users list, automatic reminder-to-log messages, and notifications</li>
+                      <li>Subscription and admin upgrade modals with plan pricing, plus API-connected Terms of
+                        Service acceptance</li>
+                      <li>Responsive landing page redesign with a mobile warning modal below 768px</li>
+                      <li>Migrated the UI from Bootstrap to MUI, matched to Figma designs</li>
+                    </ul>
+                    <p>
+                      <strong>Architecture &amp; Dev Practices:</strong> React 18, TypeScript and MUI (X Charts,
+                      Data Grid, Date Pickers), with Nivo and Recharts for charting, Azure AD B2C (MSAL) for auth
+                      and Azure App Service for hosting. Upgraded the app to React 18 and fixed the resulting
+                      dependency, MUI and TypeScript breakages, added lazy loading and code splitting, and fixed
+                      Azure access-token handling.
+                    </p>
+                    <p>
+                      <strong>Testing:</strong> wrote 27 of the project's 54 Jest/React Testing Library test
+                      files, covering API calls, the dashboard, modals and charts.
+                    </p>
+                  </div>
+                </details>
                 <ul class="project-stack" aria-label="Tech stack">
                   <li>React</li>
                   <li>TypeScript</li>
                   <li>MUI</li>
-                  <li>Jest</li>
-                  <li>React Testing Library</li>
+                  <li>Nivo / Recharts</li>
+                  <li>Azure B2C</li>
+                  <li>Jest / RTL</li>
                 </ul>
               </div>
+              <a href="https://www.computingreapplied.com/home" target="_blank" rel="noreferrer"
+                class="cta-btn cta-btn--hero">View Online</a>
             </div>
           </div>
           <div class="col-lg-8 col-sm-12">
@@ -757,7 +792,7 @@
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                 class="thumbnail rounded js-tilt">
                 <img class="img-fluid" src="./assets/projectMyMedDiary.png"
-                  alt="MyMedDiary health research dashboard — React, TypeScript, MUI, charts and tests, 174 commits"
+                  alt="MyMedDiary landing page for the nutrition and symptom research dashboard — React, TypeScript, MUI, Azure B2C, 177 commits"
                   width="800" height="450" loading="lazy" />
               </div>
             </div>
