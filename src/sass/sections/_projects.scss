@@ -94,6 +94,34 @@
     }
   }
 
+  // Several phone screenshots side by side (PlantPal)
+  .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+    @include respond(phone) {
+      gap: 0.8rem;
+      margin-bottom: 3.2rem;
+    }
+
+    & .thumbnail {
+      overflow: hidden;
+
+      @include respond(phone) {
+        margin-bottom: 0;
+      }
+    }
+
+    // Screenshots come in slightly different ratios; crop to one phone shape
+    img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
   .project-filters {
     display: flex;
     flex-wrap: wrap;
