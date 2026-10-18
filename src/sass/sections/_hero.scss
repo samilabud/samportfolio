@@ -1,13 +1,18 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 #hero {
+  // min-height (not a fixed height) so the content can grow past the
+  // viewport on small screens instead of spilling into #about.
   min-height: 100vh;
-  height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
   background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
-  padding: 0rem 5.6rem;
+  padding: 8rem 5.6rem 4rem;
   margin-bottom: 0;
   top: 0;
   left: 0;
@@ -25,7 +30,8 @@
   background-size: cover; */
 
   @include respond(phone) {
-    padding: 0rem $default-font-size;
+    // Clear the two-row fixed nav
+    padding: 10rem $default-font-size 4rem;
   }
 
   .hero-title {
@@ -42,11 +48,12 @@
       text-align: center;
     }
     @include respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
+      font-size: 3rem;
+      line-height: 1.3;
+      margin-bottom: 2.4rem;
     }
     @include respond(phone-xs) {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
     }
   }
 
@@ -56,6 +63,10 @@
     max-width: 60rem;
     margin-bottom: 3.2rem;
     text-align: left;
+
+    @include respond(phone) {
+      margin-bottom: 2.4rem;
+    }
 
     @include respond(tab-port) {
       font-size: 1.6rem;
@@ -90,7 +101,7 @@
       font-size: 2.4rem;
 
       @include respond(phone) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   }

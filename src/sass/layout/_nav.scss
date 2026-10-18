@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .skip-link {
   position: absolute;
   top: -100%;
@@ -26,7 +29,11 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   @include respond(phone) {
-    padding: 1rem $default-font-size;
+    padding: 0.8rem $default-font-size;
+    // No transparent state on phones: the nav wraps to two rows here and
+    // would sit directly on top of the hero text.
+    background-color: rgba($white-color, 0.97);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
 
   &--scrolled {
@@ -40,6 +47,11 @@
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
   }
 
   &__brand {
@@ -47,6 +59,7 @@
     font-weight: 700;
     color: $dark-blue-text;
     text-decoration: none;
+    white-space: nowrap;
 
     &:hover {
       color: $secondary-color;
@@ -70,9 +83,13 @@
     }
 
     @include respond(phone) {
-      gap: 1rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
-      justify-content: flex-end;
+      justify-content: center;
+    }
+
+    @include respond(phone-xs) {
+      gap: 0.8rem;
     }
 
     a {
@@ -103,6 +120,14 @@
     &:hover {
       -webkit-text-fill-color: $white-color !important;
       color: $white-color !important;
+    }
+  }
+
+  // The Resume button doesn't fit on the links row at phone widths; the hero
+  // has its own Resume button directly below.
+  &__links li:has(> .site-nav__cta) {
+    @include respond(phone) {
+      display: none;
     }
   }
 }

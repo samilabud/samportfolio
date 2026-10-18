@@ -1,6 +1,14 @@
+@use "../abstracts/mixins" as *;
+
 // Section
 section {
   padding: 5rem 0rem;
+  // Keep anchor targets from landing under the fixed nav
+  scroll-margin-top: 6rem;
+
+  @include respond(phone) {
+    scroll-margin-top: 9rem;
+  }
 
   @include respond(phone) {
     border: none;

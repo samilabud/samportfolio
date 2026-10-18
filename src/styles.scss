@@ -1,21 +1,19 @@
-@import "./sass/vendors/bootstrap.scss";
+@use "./sass/vendors/bootstrap";
 
-@import "./sass/abstracts/mixins";
-@import "./sass/abstracts/variables";
-@import "./sass/abstracts/helpers";
+@use "./sass/abstracts/helpers";
 
-@import "./sass/base/base";
-@import "./sass/base/typography";
+@use "./sass/base/base";
+@use "./sass/base/typography";
 
-@import "./sass/components/buttons";
+@use "./sass/components/buttons";
 
-@import "./sass/layout/footer";
-@import "./sass/layout/nav";
-@import "./sass/layout/sections";
+@use "./sass/layout/footer";
+@use "./sass/layout/nav";
+@use "./sass/layout/sections";
 
-@import "./sass/sections/about";
-@import "./sass/sections/skills";
-@import "./sass/sections/contact";
-@import "./sass/sections/hero";
-@import "./sass/sections/projects";
-@import "./sass/sections/case-study";
+@use "./sass/sections/about";
+@use "./sass/sections/skills";
+@use "./sass/sections/contact";
+@use "./sass/sections/hero";
+@use "./sass/sections/projects";
+@use "./sass/sections/case-study";
