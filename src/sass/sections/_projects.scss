@@ -173,6 +173,15 @@
     display: none;
   }
 
+  // Deep-linked projects (samilabud.com/plantpal) land below the fixed nav
+  .project-wrapper .row[id] {
+    scroll-margin-top: 8rem;
+
+    @include respond(phone) {
+      scroll-margin-top: 10rem;
+    }
+  }
+
   .project-tags {
     display: flex;
     flex-wrap: wrap;

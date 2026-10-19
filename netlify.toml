@@ -1,0 +1,6 @@
+# Project deep links: serve the home page and let src/scripts/deepLink.js
+# scroll to the matching project row.
+[[redirects]]
+  from = "/plantpal"
+  to = "/index.html"
+  status = 200
