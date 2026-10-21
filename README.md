@@ -1,6 +1,6 @@
 # Sam Portfolio
 
-Personal portfolio site for **Samil Abud** — Full-Stack Web Developer. A single-page site showcasing SaaS products, mobile apps, and web projects.
+Personal portfolio site for **Samil Abud** — Senior Full-Stack & AI Engineer. A single-page site showcasing SaaS products, mobile apps, and web projects.
 
 **Live site:** [samilabud.com](https://samilabud.com)
 
