@@ -164,10 +164,13 @@
               production monorepo, working with a product owner and QA.
             </p>
             <p class="about-wrapper__info-text">
-              Outside Evercred, I built the frontend and backend of CityRoomFinder, a live rental and roommate
-              marketplace, and own the schema, passwordless login and admin tools on Discount Club, a multi-tenant
-              booking platform. I'm also freelancing on Upwork, and I ship mobile too: PlantPal and Animal Adventures
-              are React Native apps live on Google Play.
+              Outside Evercred, I've shipped for clients and on my own: CityRoomFinder, a live rental and roommate
+              marketplace (frontend and backend); a booking site for a client with passwordless login and admin tools;
+              and a Figma-to-React Native polish pass for a trading-card app, 17 merged pull requests in 11 days. I also
+              ship mobile: Animal Adventures is live on the App Store and Google Play, and PlantPal is live on Google
+              Play. I have contributed to open source (16 pull requests to Expensify/App, 9 merged) and freelance on
+              Upwork with a 100% Job Success score and 28 completed jobs. I'm open to remote full-time or contract
+              roles, in UTC-4.
             </p>
             <span class="d-flex mt-3">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
@@ -216,6 +219,7 @@
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">Prisma</span>
+            <span class="skill-tag">Drizzle ORM</span>
             <span class="skill-tag">Tailwind CSS</span>
           </div>
         </div>
@@ -252,14 +256,14 @@
             <span class="skill-tag">Redux</span>
             <span class="skill-tag">React Native</span>
             <span class="skill-tag">Expo</span>
+            <span class="skill-tag">MUI</span>
           </div>
         </div>
         <div class="skill-group">
           <h3 class="skill-group__title">Cloud &amp; DevOps</h3>
           <div class="skills-grid">
             <span class="skill-tag">Vercel</span>
-            <span class="skill-tag">AWS (CDK/ECS/EKS)</span>
-            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">AWS (CDK/EKS, at Evercred)</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">GitHub Actions CI</span>
           </div>
@@ -579,7 +583,7 @@
               <div class="project-description">
                 <p>
                   Solo-built and published cross-platform (iOS/Android/Web) educational app for preschoolers, live on
-                  Google Play under the Families program. Built a custom COPPA-compliant analytics system from scratch
+                  the App Store and on Google Play (under the Families program). Built a custom COPPA-compliant analytics system from scratch
                   with zero PII/device-identifier collection, and authored the app's privacy policy. Designed a
                   persistent game-state architecture (<strong>React Context</strong> + <strong>AsyncStorage</strong>)
                   with debounced writes and crash-safe resumability, plus a literacy-based (not math-based) parental
@@ -612,6 +616,10 @@
                 View on Google Play
               </a>
               <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://apps.apple.com/us/app/animal-adventures-elilearn/id6826390851">
+                View on App Store
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
                 href="https://github.com/samilabud/EliLearnApp.git">
                 Source Code
               </a>
@@ -623,14 +631,30 @@
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image">
-              <a href="https://play.google.com/store/apps/details?id=com.elilearnapps.animaladventures" target="_blank"
-                rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectAnimalAdventures.png" alt="Animal Adventures app screenshot"
-                    width="800" height="450" loading="lazy" />
+              <div class="project-carousel js-carousel" role="region" aria-roledescription="carousel"
+                aria-label="Animal Adventures screenshots">
+                <div class="thumbnail rounded">
+                  <div class="project-carousel__track" tabindex="0">
+                    <img class="img-fluid" src="./assets/projectAnimalAdventures.png"
+                      alt="Animal Adventures app icon and title artwork" width="1394" height="786" loading="lazy" />
+                    <img class="img-fluid" src="./assets/animal-gallery-1.jpg"
+                      alt="Animal Adventures home screen with today's animal, next to the Discover Animals grid of 24 animals" width="1600" height="1000" loading="lazy" />
+                    <img class="img-fluid" src="./assets/animal-gallery-2.jpg"
+                      alt="Animal Adventures sound game with six animals, and the color animals game" width="1600" height="1000" loading="lazy" />
+                    <img class="img-fluid" src="./assets/animal-gallery-3.jpg"
+                      alt="Animal Adventures guess-the-first-letter game and the trace-the-letter game" width="1600" height="1000" loading="lazy" />
+                    <img class="img-fluid" src="./assets/animal-gallery-4.jpg"
+                      alt="Animal Adventures memory game to find animals, and the build-your-scene game" width="1600" height="1000" loading="lazy" />
+                  </div>
                 </div>
-              </a>
+                <div class="project-carousel__controls">
+                  <button type="button" class="project-carousel__btn project-carousel__btn--prev"
+                    aria-label="Previous screenshot">&larr;</button>
+                  <div class="project-carousel__dots"></div>
+                  <button type="button" class="project-carousel__btn project-carousel__btn--next"
+                    aria-label="Next screenshot">&rarr;</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1082,49 +1106,6 @@
         </div>
         <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
-        <div class="row" data-origin="personal" data-platform="mobile">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <div class="project-tags">
-                <span class="project-tag project-tag--personal">Personal project</span>
-                <span class="project-tag project-tag--mobile">Mobile app</span>
-              </div>
-              <h3 class="project-wrapper__text-title">
-                Mobile Project - Meals To Go
-              </h3>
-              <div>
-                <p class="mb-4">
-                  Restaurant mobile App built with <strong>React Native</strong>, I used the Expo SDK to generate native
-                  Android/IOS code, Lottie to generate animations, expo/native libraries to control the behavior of the
-                  status bar, the camera, manage user gestures, integrate this with google maps, add screen navigations,
-                  and font integrations. I have also used <strong>Firebase</strong> to manage user registrations and
-                  authentications. This was created in 2021 but is updated to 2023.
-                </p>
-              </div>
-              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
-                href="https://youtube.com/shorts/9FJJ3gwoB94?feature=share">
-                View Demo
-              </a>
-              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
-                href="https://github.com/samilabud/MealsToGo">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image">
-              <a href="https://github.com/samilabud/MealsToGo" target="_blank" rel="noreferrer">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go restaurant app screenshot"
-                    width="800" height="450" loading="lazy" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- **** /END Project **** -->
-        <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
@@ -1171,6 +1152,49 @@
         <details class="earlier-projects">
           <summary class="earlier-projects__toggle">Earlier work &amp; coursework</summary>
           <div class="earlier-projects__inner">
+        <!-- **** Each .row is a project **** -->
+        <div class="row" data-origin="personal" data-platform="mobile">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <div class="project-tags">
+                <span class="project-tag project-tag--personal">Personal project</span>
+                <span class="project-tag project-tag--mobile">Mobile app</span>
+              </div>
+              <h3 class="project-wrapper__text-title">
+                Mobile Project - Meals To Go
+              </h3>
+              <div>
+                <p class="mb-4">
+                  Restaurant mobile App built with <strong>React Native</strong>, I used the Expo SDK to generate native
+                  Android/IOS code, Lottie to generate animations, expo/native libraries to control the behavior of the
+                  status bar, the camera, manage user gestures, integrate this with google maps, add screen navigations,
+                  and font integrations. I have also used <strong>Firebase</strong> to manage user registrations and
+                  authentications. This was created in 2021 but is updated to 2023.
+                </p>
+              </div>
+              <a target="_blank" rel="noreferrer" class="cta-btn cta-btn--hero"
+                href="https://youtube.com/shorts/9FJJ3gwoB94?feature=share">
+                View Demo
+              </a>
+              <a target="_blank" rel="noreferrer" class="cta-btn text-color-main"
+                href="https://github.com/samilabud/MealsToGo">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://github.com/samilabud/MealsToGo" target="_blank" rel="noreferrer">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <img class="img-fluid" src="./assets/projectMealsToGo.png" alt="Meals To Go restaurant app screenshot"
+                    width="800" height="450" loading="lazy" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- **** /END Project **** -->
         <!-- **** Each .row is a project **** -->
         <div class="row" data-origin="personal" data-platform="web">
           <div class="col-lg-4 col-sm-12">
