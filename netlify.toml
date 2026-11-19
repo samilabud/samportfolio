@@ -4,3 +4,11 @@
   from = "/plantpal"
   to = "/index.html"
   status = 200
+
+# Send the netlify.app address to the custom domain so search engines
+# consolidate on https://samilabud.com.
+[[redirects]]
+  from = "https://samilabud.netlify.app/*"
+  to = "https://samilabud.com/:splat"
+  status = 301
+  force = true
