@@ -5,6 +5,11 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/piano-pop"
+  to = "/index.html"
+  status = 200
+
 # Send the netlify.app address to the custom domain so search engines
 # consolidate on https://samilabud.com.
 [[redirects]]
