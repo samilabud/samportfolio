@@ -770,11 +770,28 @@
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                class="thumbnail rounded js-tilt">
-                <img class="img-fluid" src="./assets/sweepAndSleep.png"
-                  alt="SweepNSleep rooms dashboard showing roommate status, chore completion, rent and payment actions"
-                  width="3360" height="1938" loading="lazy" />
+              <div class="project-carousel js-carousel" role="region" aria-roledescription="carousel"
+                aria-label="SweepNSleep screenshots">
+                <div class="thumbnail rounded">
+                  <div class="project-carousel__track" tabindex="0">
+                    <img class="img-fluid" src="./assets/sweepnsleep-gallery-1.jpg"
+                      alt="SweepNSleep home page with the headline Run your shared house without the headaches, sign up buttons and a strip of key features"
+                      width="2400" height="1384" loading="lazy" />
+                    <img class="img-fluid" src="./assets/sweepnsleep-gallery-2.jpg"
+                      alt="SweepNSleep landing page section comparing what landlords and roommates get from the platform"
+                      width="2400" height="1384" loading="lazy" />
+                    <img class="img-fluid" src="./assets/sweepAndSleep.png"
+                      alt="SweepNSleep rooms dashboard showing roommate status, chore completion, rent and payment actions"
+                      width="3360" height="1938" loading="lazy" />
+                  </div>
+                </div>
+                <div class="project-carousel__controls">
+                  <button type="button" class="project-carousel__btn project-carousel__btn--prev"
+                    aria-label="Previous screenshot">&larr;</button>
+                  <div class="project-carousel__dots"></div>
+                  <button type="button" class="project-carousel__btn project-carousel__btn--next"
+                    aria-label="Next screenshot">&rarr;</button>
+                </div>
               </div>
             </div>
           </div>
